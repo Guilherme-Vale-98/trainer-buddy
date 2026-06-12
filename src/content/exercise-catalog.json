@@ -1,0 +1,2766 @@
+{
+  "schema": "trainer-buddy-exercise-catalog",
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-11T08:13:05.714Z",
+  "languages": [
+    "pt",
+    "en"
+  ],
+  "muscleGroups": [
+    "chest",
+    "back",
+    "legs",
+    "shoulders",
+    "biceps",
+    "triceps",
+    "core"
+  ],
+  "attribution": "Exercise data and images from free-exercise-db (public domain, https://github.com/yuhonas/free-exercise-db). Cross-referenced with the wger.de exercise database. Portuguese translations curated for Trainer Buddy.",
+  "exercises": [
+    {
+      "id": "barbell-bench-press",
+      "name": {
+        "pt": "Supino reto com barra",
+        "en": "Barbell Bench Press"
+      },
+      "instructions": {
+        "pt": [
+          "Deite no banco reto e segure a barra com pegada um pouco mais aberta que a largura dos ombros.",
+          "Retire a barra do suporte e desça de forma controlada até tocar levemente o meio do peito.",
+          "Empurre a barra para cima até estender os braços, sem travar os cotovelos bruscamente.",
+          "Mantenha os pés firmes no chão e as escápulas retraídas durante todo o movimento."
+        ],
+        "en": [
+          "Lie back on a flat bench. Using a medium width grip (a grip that creates a 90-degree angle in the middle of the movement between the forearms and the upper arms), lift the bar from the rack and hold it straight over you with your arms locked. This will be your starting position.",
+          "From the starting position, breathe in and begin coming down slowly until the bar touches your middle chest.",
+          "After a brief pause, push the bar back to the starting position as you breathe out. Focus on pushing the bar using your chest muscles. Lock your arms and squeeze your chest in the contracted position at the top of the motion, hold for a second and then start coming down slowly again. Tip: Ideally, lowering the weight should take about twice as long as raising it.",
+          "Repeat the movement for the prescribed amount of repetitions.",
+          "When you are done, place the bar back in the rack."
+        ]
+      },
+      "muscleGroup": "chest",
+      "primaryMuscles": [
+        "chest"
+      ],
+      "secondaryMuscles": [
+        "shoulders",
+        "triceps"
+      ],
+      "equipment": "barbell",
+      "defaultRestSeconds": 120,
+      "images": [
+        "media/barbell-bench-press-0.jpg",
+        "media/barbell-bench-press-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Barbell_Bench_Press_-_Medium_Grip",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "dumbbell-bench-press",
+      "name": {
+        "pt": "Supino reto com halteres",
+        "en": "Dumbbell Bench Press"
+      },
+      "instructions": {
+        "pt": [
+          "Deite no banco reto segurando um halter em cada mão, na altura do peito.",
+          "Empurre os halteres para cima até estender os braços sobre o peito.",
+          "Desça de forma controlada até sentir um leve alongamento no peitoral.",
+          "Repita mantendo os punhos firmes e o movimento simétrico."
+        ],
+        "en": [
+          "Lie down on a flat bench with a dumbbell in each hand resting on top of your thighs. The palms of your hands will be facing each other.",
+          "Then, using your thighs to help raise the dumbbells up, lift the dumbbells one at a time so that you can hold them in front of you at shoulder width.",
+          "Once at shoulder width, rotate your wrists forward so that the palms of your hands are facing away from you. The dumbbells should be just to the sides of your chest, with your upper arm and forearm creating a 90 degree angle. Be sure to maintain full control of the dumbbells at all times. This will be your starting position.",
+          "Then, as you breathe out, use your chest to push the dumbbells up. Lock your arms at the top of the lift and squeeze your chest, hold for a second and then begin coming down slowly. Tip: Ideally, lowering the weight should take about twice as long as raising it.",
+          "Repeat the movement for the prescribed amount of repetitions of your training program."
+        ]
+      },
+      "muscleGroup": "chest",
+      "primaryMuscles": [
+        "chest"
+      ],
+      "secondaryMuscles": [
+        "shoulders",
+        "triceps"
+      ],
+      "equipment": "dumbbell",
+      "defaultRestSeconds": 90,
+      "images": [
+        "media/dumbbell-bench-press-0.jpg",
+        "media/dumbbell-bench-press-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Dumbbell_Bench_Press",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": "28321cf3-70e6-48a4-ade1-d11382180cb3"
+      }
+    },
+    {
+      "id": "incline-dumbbell-press",
+      "name": {
+        "pt": "Supino inclinado com halteres",
+        "en": "Incline Dumbbell Press"
+      },
+      "instructions": {
+        "pt": [
+          "Ajuste o banco em inclinação de 30 a 45 graus e deite segurando um halter em cada mão.",
+          "Posicione os halteres na altura da parte superior do peito, com as palmas para frente.",
+          "Empurre os halteres para cima até estender os braços e desça de forma controlada.",
+          "Mantenha a lombar apoiada no banco durante todo o movimento."
+        ],
+        "en": [
+          "Lie back on an incline bench with a dumbbell in each hand atop your thighs. The palms of your hands will be facing each other.",
+          "Then, using your thighs to help push the dumbbells up, lift the dumbbells one at a time so that you can hold them at shoulder width.",
+          "Once you have the dumbbells raised to shoulder width, rotate your wrists forward so that the palms of your hands are facing away from you. This will be your starting position.",
+          "Be sure to keep full control of the dumbbells at all times. Then breathe out and push the dumbbells up with your chest.",
+          "Lock your arms at the top, hold for a second, and then start slowly lowering the weight. Tip Ideally, lowering the weights should take about twice as long as raising them.",
+          "Repeat the movement for the prescribed amount of repetitions.",
+          "When you are done, place the dumbbells back on your thighs and then on the floor. This is the safest manner to release the dumbbells."
+        ]
+      },
+      "muscleGroup": "chest",
+      "primaryMuscles": [
+        "chest"
+      ],
+      "secondaryMuscles": [
+        "shoulders",
+        "triceps"
+      ],
+      "equipment": "dumbbell",
+      "defaultRestSeconds": 90,
+      "images": [
+        "media/incline-dumbbell-press-0.jpg",
+        "media/incline-dumbbell-press-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Incline_Dumbbell_Press",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": "57e17672-52b9-43cf-8d0d-4b3f06a0c0d0"
+      }
+    },
+    {
+      "id": "dumbbell-fly",
+      "name": {
+        "pt": "Crucifixo reto com halteres",
+        "en": "Dumbbell Fly"
+      },
+      "instructions": {
+        "pt": [
+          "Deite no banco reto com um halter em cada mão, braços estendidos sobre o peito e palmas frente a frente.",
+          "Abra os braços em arco, com os cotovelos levemente flexionados, até sentir o alongamento do peitoral.",
+          "Retorne pelo mesmo arco apertando o peitoral no topo do movimento.",
+          "Evite descer além do confortável para proteger os ombros."
+        ],
+        "en": [
+          "Lie down on a flat bench with a dumbbell on each hand resting on top of your thighs. The palms of your hand will be facing each other.",
+          "Then using your thighs to help raise the dumbbells, lift the dumbbells one at a time so you can hold them in front of you at shoulder width with the palms of your hands facing each other. Raise the dumbbells up like you're pressing them, but stop and hold just before you lock out. This will be your starting position.",
+          "With a slight bend on your elbows in order to prevent stress at the biceps tendon, lower your arms out at both sides in a wide arc until you feel a stretch on your chest. Breathe in as you perform this portion of the movement. Tip: Keep in mind that throughout the movement, the arms should remain stationary; the movement should only occur at the shoulder joint.",
+          "Return your arms back to the starting position as you squeeze your chest muscles and breathe out. Tip: Make sure to use the same arc of motion used to lower the weights.",
+          "Hold for a second at the contracted position and repeat the movement for the prescribed amount of repetitions."
+        ]
+      },
+      "muscleGroup": "chest",
+      "primaryMuscles": [
+        "chest"
+      ],
+      "secondaryMuscles": [],
+      "equipment": "dumbbell",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/dumbbell-fly-0.jpg",
+        "media/dumbbell-fly-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Dumbbell_Flyes",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "cable-crossover",
+      "name": {
+        "pt": "Crossover na polia",
+        "en": "Cable Crossover"
+      },
+      "instructions": {
+        "pt": [
+          "Posicione as polias acima da cabeça e segure um pegador em cada mão, dando um passo à frente.",
+          "Com o tronco levemente inclinado, traga as mãos à frente do corpo em movimento de arco até elas se cruzarem.",
+          "Aperte o peitoral no final e retorne de forma controlada até sentir o alongamento.",
+          "Mantenha os cotovelos levemente flexionados o tempo todo."
+        ],
+        "en": [
+          "To get yourself into the starting position, place the pulleys on a high position (above your head), select the resistance to be used and hold the pulleys in each hand.",
+          "Step forward in front of an imaginary straight line between both pulleys while pulling your arms together in front of you. Your torso should have a small forward bend from the waist. This will be your starting position.",
+          "With a slight bend on your elbows in order to prevent stress at the biceps tendon, extend your arms to the side (straight out at both sides) in a wide arc until you feel a stretch on your chest. Breathe in as you perform this portion of the movement. Tip: Keep in mind that throughout the movement, the arms and torso should remain stationary; the movement should only occur at the shoulder joint.",
+          "Return your arms back to the starting position as you breathe out. Make sure to use the same arc of motion used to lower the weights.",
+          "Hold for a second at the starting position and repeat the movement for the prescribed amount of repetitions."
+        ]
+      },
+      "muscleGroup": "chest",
+      "primaryMuscles": [
+        "chest"
+      ],
+      "secondaryMuscles": [
+        "shoulders"
+      ],
+      "equipment": "cable",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/cable-crossover-0.jpg",
+        "media/cable-crossover-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Cable_Crossover",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "push-up",
+      "name": {
+        "pt": "Flexão de braço",
+        "en": "Push-Up"
+      },
+      "instructions": {
+        "pt": [
+          "Apoie as mãos no chão na largura dos ombros e estenda as pernas, formando uma linha reta do corpo.",
+          "Desça o corpo flexionando os cotovelos até o peito quase tocar o chão.",
+          "Empurre o chão até estender os braços de volta à posição inicial.",
+          "Mantenha o abdômen contraído e o quadril alinhado durante todo o movimento."
+        ],
+        "en": [
+          "Lie on the floor face down and place your hands about 36 inches apart while holding your torso up at arms length.",
+          "Next, lower yourself downward until your chest almost touches the floor as you inhale.",
+          "Now breathe out and press your upper body back up to the starting position while squeezing your chest.",
+          "After a brief pause at the top contracted position, you can begin to lower yourself downward again for as many repetitions as needed."
+        ]
+      },
+      "muscleGroup": "chest",
+      "primaryMuscles": [
+        "chest"
+      ],
+      "secondaryMuscles": [
+        "shoulders",
+        "triceps"
+      ],
+      "equipment": "bodyweight",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/push-up-0.jpg",
+        "media/push-up-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Pushups",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "chest-dip",
+      "name": {
+        "pt": "Paralelas com ênfase no peitoral",
+        "en": "Chest Dip"
+      },
+      "instructions": {
+        "pt": [
+          "Segure as barras paralelas e suspenda o corpo com os braços estendidos.",
+          "Incline o tronco levemente à frente e desça flexionando os cotovelos até sentir alongar o peitoral.",
+          "Empurre de volta até estender os braços, mantendo a inclinação do tronco.",
+          "Desça sempre de forma controlada para proteger os ombros."
+        ],
+        "en": [
+          "For this exercise you will need access to parallel bars. To get yourself into the starting position, hold your body at arms length (arms locked) above the bars.",
+          "While breathing in, lower yourself slowly with your torso leaning forward around 30 degrees or so and your elbows flared out slightly until you feel a slight stretch in the chest.",
+          "Once you feel the stretch, use your chest to bring your body back to the starting position as you breathe out. Tip: Remember to squeeze the chest at the top of the movement for a second.",
+          "Repeat the movement for the prescribed amount of repetitions."
+        ]
+      },
+      "muscleGroup": "chest",
+      "primaryMuscles": [
+        "chest"
+      ],
+      "secondaryMuscles": [
+        "shoulders",
+        "triceps"
+      ],
+      "equipment": "other",
+      "defaultRestSeconds": 90,
+      "images": [
+        "media/chest-dip-0.jpg",
+        "media/chest-dip-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Dips_-_Chest_Version",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": "09dd3e3c-e53a-4e2c-a2e3-645d334f53e2"
+      }
+    },
+    {
+      "id": "pull-up",
+      "name": {
+        "pt": "Barra fixa",
+        "en": "Pull-Up"
+      },
+      "instructions": {
+        "pt": [
+          "Segure a barra fixa com pegada pronada, um pouco mais aberta que a largura dos ombros.",
+          "Puxe o corpo para cima até o queixo passar da barra, levando os cotovelos para baixo e para trás.",
+          "Desça de forma controlada até estender quase totalmente os braços.",
+          "Evite balançar o corpo para gerar impulso."
+        ],
+        "en": [
+          "Grab the pull-up bar with the palms facing forward using the prescribed grip. Note on grips: For a wide grip, your hands need to be spaced out at a distance wider than your shoulder width. For a medium grip, your hands need to be spaced out at a distance equal to your shoulder width and for a close grip at a distance smaller than your shoulder width.",
+          "As you have both arms extended in front of you holding the bar at the chosen grip width, bring your torso back around 30 degrees or so while creating a curvature on your lower back and sticking your chest out. This is your starting position.",
+          "Pull your torso up until the bar touches your upper chest by drawing the shoulders and the upper arms down and back. Exhale as you perform this portion of the movement. Tip: Concentrate on squeezing the back muscles once you reach the full contracted position. The upper torso should remain stationary as it moves through space and only the arms should move. The forearms should do no other work other than hold the bar.",
+          "After a second on the contracted position, start to inhale and slowly lower your torso back to the starting position when your arms are fully extended and the lats are fully stretched.",
+          "Repeat this motion for the prescribed amount of repetitions."
+        ]
+      },
+      "muscleGroup": "back",
+      "primaryMuscles": [
+        "lats"
+      ],
+      "secondaryMuscles": [
+        "biceps",
+        "middle back"
+      ],
+      "equipment": "bodyweight",
+      "defaultRestSeconds": 120,
+      "images": [
+        "media/pull-up-0.jpg",
+        "media/pull-up-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Pullups",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": "8e420408-0682-4ab6-89f5-2681e54c7ce0"
+      }
+    },
+    {
+      "id": "lat-pulldown",
+      "name": {
+        "pt": "Puxada alta na polia",
+        "en": "Wide-Grip Lat Pulldown"
+      },
+      "instructions": {
+        "pt": [
+          "Sente no equipamento, prenda as coxas no apoio e segure a barra com pegada aberta.",
+          "Puxe a barra até a parte superior do peito, levando os cotovelos para baixo e para trás.",
+          "Aperte as costas no final do movimento e retorne de forma controlada.",
+          "Evite inclinar demais o tronco para trás ou usar impulso."
+        ],
+        "en": [
+          "Sit down on a pull-down machine with a wide bar attached to the top pulley. Make sure that you adjust the knee pad of the machine to fit your height. These pads will prevent your body from being raised by the resistance attached to the bar.",
+          "Grab the bar with the palms facing forward using the prescribed grip. Note on grips: For a wide grip, your hands need to be spaced out at a distance wider than shoulder width. For a medium grip, your hands need to be spaced out at a distance equal to your shoulder width and for a close grip at a distance smaller than your shoulder width.",
+          "As you have both arms extended in front of you holding the bar at the chosen grip width, bring your torso back around 30 degrees or so while creating a curvature on your lower back and sticking your chest out. This is your starting position.",
+          "As you breathe out, bring the bar down until it touches your upper chest by drawing the shoulders and the upper arms down and back. Tip: Concentrate on squeezing the back muscles once you reach the full contracted position. The upper torso should remain stationary and only the arms should move. The forearms should do no other work except for holding the bar; therefore do not try to pull down the bar using the forearms.",
+          "After a second at the contracted position squeezing your shoulder blades together, slowly raise the bar back to the starting position when your arms are fully extended and the lats are fully stretched. Inhale during this portion of the movement.",
+          "Repeat this motion for the prescribed amount of repetitions."
+        ]
+      },
+      "muscleGroup": "back",
+      "primaryMuscles": [
+        "lats"
+      ],
+      "secondaryMuscles": [
+        "biceps",
+        "middle back",
+        "shoulders"
+      ],
+      "equipment": "cable",
+      "defaultRestSeconds": 90,
+      "images": [
+        "media/lat-pulldown-0.jpg",
+        "media/lat-pulldown-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Wide-Grip_Lat_Pulldown",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": "fff05d7a-f374-4c8a-9885-39f49076918f"
+      }
+    },
+    {
+      "id": "bent-over-barbell-row",
+      "name": {
+        "pt": "Remada curvada com barra",
+        "en": "Bent-Over Barbell Row"
+      },
+      "instructions": {
+        "pt": [
+          "Segure a barra com pegada pronada e incline o tronco à frente, mantendo a coluna neutra e os joelhos levemente flexionados.",
+          "Puxe a barra em direção à parte inferior do abdômen, levando os cotovelos para trás.",
+          "Aperte as escápulas no topo e desça a barra de forma controlada.",
+          "Mantenha o abdômen contraído e evite arredondar a lombar."
+        ],
+        "en": [
+          "Holding a barbell with a pronated grip (palms facing down), bend your knees slightly and bring your torso forward, by bending at the waist, while keeping the back straight until it is almost parallel to the floor. Tip: Make sure that you keep the head up. The barbell should hang directly in front of you as your arms hang perpendicular to the floor and your torso. This is your starting position.",
+          "Now, while keeping the torso stationary, breathe out and lift the barbell to you. Keep the elbows close to the body and only use the forearms to hold the weight. At the top contracted position, squeeze the back muscles and hold for a brief pause.",
+          "Then inhale and slowly lower the barbell back to the starting position.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "back",
+      "primaryMuscles": [
+        "middle back"
+      ],
+      "secondaryMuscles": [
+        "biceps",
+        "lats",
+        "shoulders"
+      ],
+      "equipment": "barbell",
+      "defaultRestSeconds": 90,
+      "images": [
+        "media/bent-over-barbell-row-0.jpg",
+        "media/bent-over-barbell-row-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Bent_Over_Barbell_Row",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": "4af6dbd9-8991-484b-9810-68f117c21edf"
+      }
+    },
+    {
+      "id": "seated-cable-row",
+      "name": {
+        "pt": "Remada baixa na polia",
+        "en": "Seated Cable Row"
+      },
+      "instructions": {
+        "pt": [
+          "Sente no equipamento com os pés apoiados e segure o triângulo com os braços estendidos.",
+          "Puxe o pegador em direção ao abdômen, mantendo o tronco ereto.",
+          "Aperte as escápulas no final do movimento e retorne de forma controlada.",
+          "Evite balançar o tronco para frente e para trás."
+        ],
+        "en": [
+          "For this exercise you will need access to a low pulley row machine with a V-bar. Note: The V-bar will enable you to have a neutral grip where the palms of your hands face each other. To get into the starting position, first sit down on the machine and place your feet on the front platform or crossbar provided making sure that your knees are slightly bent and not locked.",
+          "Lean over as you keep the natural alignment of your back and grab the V-bar handles.",
+          "With your arms extended pull back until your torso is at a 90-degree angle from your legs. Your back should be slightly arched and your chest should be sticking out. You should be feeling a nice stretch on your lats as you hold the bar in front of you. This is the starting position of the exercise.",
+          "Keeping the torso stationary, pull the handles back towards your torso while keeping the arms close to it until you touch the abdominals. Breathe out as you perform that movement. At that point you should be squeezing your back muscles hard. Hold that contraction for a second and slowly go back to the original position while breathing in.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "back",
+      "primaryMuscles": [
+        "middle back"
+      ],
+      "secondaryMuscles": [
+        "biceps",
+        "lats",
+        "shoulders"
+      ],
+      "equipment": "cable",
+      "defaultRestSeconds": 90,
+      "images": [
+        "media/seated-cable-row-0.jpg",
+        "media/seated-cable-row-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Seated_Cable_Rows",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": "a7e6c20a-6ddc-4401-9935-ace2d02e3995"
+      }
+    },
+    {
+      "id": "one-arm-dumbbell-row",
+      "name": {
+        "pt": "Remada unilateral com halter (serrote)",
+        "en": "One-Arm Dumbbell Row"
+      },
+      "instructions": {
+        "pt": [
+          "Apoie o joelho e a mão do mesmo lado em um banco, mantendo a coluna paralela ao chão.",
+          "Segure o halter com a outra mão, com o braço estendido.",
+          "Puxe o halter em direção ao quadril, levando o cotovelo para cima e para trás.",
+          "Desça de forma controlada e complete as repetições antes de trocar de lado."
+        ],
+        "en": [
+          "Choose a flat bench and place a dumbbell on each side of it.",
+          "Place the right leg on top of the end of the bench, bend your torso forward from the waist until your upper body is parallel to the floor, and place your right hand on the other end of the bench for support.",
+          "Use the left hand to pick up the dumbbell on the floor and hold the weight while keeping your lower back straight. The palm of the hand should be facing your torso. This will be your starting position.",
+          "Pull the resistance straight up to the side of your chest, keeping your upper arm close to your side and keeping the torso stationary. Breathe out as you perform this step. Tip: Concentrate on squeezing the back muscles once you reach the full contracted position. Also, make sure that the force is performed with the back muscles and not the arms. Finally, the upper torso should remain stationary and only the arms should move. The forearms should do no other work except for holding the dumbbell; therefore do not try to pull the dumbbell up using the forearms.",
+          "Lower the resistance straight down to the starting position. Breathe in as you perform this step.",
+          "Repeat the movement for the specified amount of repetitions.",
+          "Switch sides and repeat again with the other arm."
+        ]
+      },
+      "muscleGroup": "back",
+      "primaryMuscles": [
+        "middle back"
+      ],
+      "secondaryMuscles": [
+        "biceps",
+        "lats",
+        "shoulders"
+      ],
+      "equipment": "dumbbell",
+      "defaultRestSeconds": 90,
+      "images": [
+        "media/one-arm-dumbbell-row-0.jpg",
+        "media/one-arm-dumbbell-row-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "One-Arm_Dumbbell_Row",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "barbell-deadlift",
+      "name": {
+        "pt": "Levantamento terra",
+        "en": "Barbell Deadlift"
+      },
+      "instructions": {
+        "pt": [
+          "Posicione os pés na largura do quadril com a barra sobre o meio dos pés.",
+          "Agache, segure a barra com as mãos fora das pernas e mantenha a coluna neutra e o peito aberto.",
+          "Levante a barra estendendo quadril e joelhos ao mesmo tempo, mantendo-a próxima ao corpo.",
+          "Finalize em pé com o quadril estendido e desça a barra de forma controlada pelo mesmo caminho."
+        ],
+        "en": [
+          "Stand in front of a loaded barbell.",
+          "While keeping the back as straight as possible, bend your knees, bend forward and grasp the bar using a medium (shoulder width) overhand grip. This will be the starting position of the exercise. Tip: If it is difficult to hold on to the bar with this grip, alternate your grip or use wrist straps.",
+          "While holding the bar, start the lift by pushing with your legs while simultaneously getting your torso to the upright position as you breathe out. In the upright position, stick your chest out and contract the back by bringing the shoulder blades back. Think of how the soldiers in the military look when they are in standing in attention.",
+          "Go back to the starting position by bending at the knees while simultaneously leaning the torso forward at the waist while keeping the back straight. When the weights on the bar touch the floor you are back at the starting position and ready to perform another repetition.",
+          "Perform the amount of repetitions prescribed in the program."
+        ]
+      },
+      "muscleGroup": "back",
+      "primaryMuscles": [
+        "lower back"
+      ],
+      "secondaryMuscles": [
+        "calves",
+        "forearms",
+        "glutes",
+        "hamstrings",
+        "lats",
+        "middle back",
+        "quadriceps",
+        "traps"
+      ],
+      "equipment": "barbell",
+      "defaultRestSeconds": 180,
+      "images": [
+        "media/barbell-deadlift-0.jpg",
+        "media/barbell-deadlift-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Barbell_Deadlift",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": "ee8e8db4-2d82-49e1-ab7f-891e9a354934"
+      }
+    },
+    {
+      "id": "straight-arm-pulldown",
+      "name": {
+        "pt": "Pulldown com braços estendidos",
+        "en": "Straight-Arm Pulldown"
+      },
+      "instructions": {
+        "pt": [
+          "Em pé, de frente para a polia alta, segure a barra com os braços estendidos na altura dos ombros.",
+          "Com os cotovelos quase travados, puxe a barra para baixo em arco até as coxas.",
+          "Sinta o trabalho dos dorsais e retorne de forma controlada até a altura dos ombros.",
+          "Mantenha o tronco estável, com leve inclinação à frente."
+        ],
+        "en": [
+          "You will start by grabbing the wide bar from the top pulley of a pulldown machine and using a wider than shoulder-width pronated (palms down) grip. Step backwards two feet or so.",
+          "Bend your torso forward at the waist by around 30-degrees with your arms fully extended in front of you and a slight bend at the elbows. If your arms are not fully extended then you need to step a bit more backwards until they are. Once your arms are fully extended and your torso is slightly bent at the waist, tighten the lats and then you are ready to begin.",
+          "While keeping the arms straight, pull the bar down by contracting the lats until your hands are next to the side of the thighs. Breathe out as you perform this step.",
+          "While keeping the arms straight, go back to the starting position while breathing in.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "back",
+      "primaryMuscles": [
+        "lats"
+      ],
+      "secondaryMuscles": [],
+      "equipment": "cable",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/straight-arm-pulldown-0.jpg",
+        "media/straight-arm-pulldown-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Straight-Arm_Pulldown",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "back-extension",
+      "name": {
+        "pt": "Extensão lombar no banco romano",
+        "en": "Back Extension (Hyperextension)"
+      },
+      "instructions": {
+        "pt": [
+          "Posicione-se no banco romano com os tornozelos presos e o quadril apoiado na almofada.",
+          "Cruze os braços no peito e desça o tronco flexionando o quadril, mantendo a coluna neutra.",
+          "Suba até o corpo formar uma linha reta, sem hiperestender a lombar.",
+          "Execute o movimento de forma lenta e controlada."
+        ],
+        "en": [
+          "Lie face down on a hyperextension bench, tucking your ankles securely under the footpads.",
+          "Adjust the upper pad if possible so your upper thighs lie flat across the wide pad, leaving enough room for you to bend at the waist without any restriction.",
+          "With your body straight, cross your arms in front of you (my preference) or behind your head. This will be your starting position. Tip: You can also hold a weight plate for extra resistance in front of you under your crossed arms.",
+          "Start bending forward slowly at the waist as far as you can while keeping your back flat. Inhale as you perform this movement. Keep moving forward until you feel a nice stretch on the hamstrings and you can no longer keep going without a rounding of the back. Tip: Never round the back as you perform this exercise. Also, some people can go farther than others. The key thing is that you go as far as your body allows you to without rounding the back.",
+          "Slowly raise your torso back to the initial position as you inhale. Tip: Avoid the temptation to arch your back past a straight line. Also, do not swing the torso at any time in order to protect the back from injury.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "back",
+      "primaryMuscles": [
+        "lower back"
+      ],
+      "secondaryMuscles": [
+        "glutes",
+        "hamstrings"
+      ],
+      "equipment": "other",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/back-extension-0.jpg",
+        "media/back-extension-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Hyperextensions_Back_Extensions",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "barbell-squat",
+      "name": {
+        "pt": "Agachamento livre com barra",
+        "en": "Barbell Squat"
+      },
+      "instructions": {
+        "pt": [
+          "Apoie a barra no trapézio, retire-a do suporte e posicione os pés na largura dos ombros.",
+          "Agache empurrando o quadril para trás e flexionando os joelhos, mantendo o peito aberto.",
+          "Desça até as coxas ficarem pelo menos paralelas ao chão, com os joelhos alinhados aos pés.",
+          "Suba empurrando o chão até estender as pernas, mantendo o abdômen contraído."
+        ],
+        "en": [
+          "This exercise is best performed inside a squat rack for safety purposes. To begin, first set the bar on a rack to just below shoulder level. Once the correct height is chosen and the bar is loaded, step under the bar and place the back of your shoulders (slightly below the neck) across it.",
+          "Hold on to the bar using both arms at each side and lift it off the rack by first pushing with your legs and at the same time straightening your torso.",
+          "Step away from the rack and position your legs using a shoulder width medium stance with the toes slightly pointed out. Keep your head up at all times and also maintain a straight back. This will be your starting position. (Note: For the purposes of this discussion we will use the medium stance described above which targets overall development; however you can choose any of the three stances discussed in the foot stances section).",
+          "Begin to slowly lower the bar by bending the knees and hips as you maintain a straight posture with the head up. Continue down until the angle between the upper leg and the calves becomes slightly less than 90-degrees. Inhale as you perform this portion of the movement. Tip: If you performed the exercise correctly, the front of the knees should make an imaginary straight line with the toes that is perpendicular to the front. If your knees are past that imaginary line (if they are past your toes) then you are placing undue stress on the knee and the exercise has been performed incorrectly.",
+          "Begin to raise the bar as you exhale by pushing the floor with the heel of your foot as you straighten the legs again and go back to the starting position.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "legs",
+      "primaryMuscles": [
+        "quadriceps"
+      ],
+      "secondaryMuscles": [
+        "calves",
+        "glutes",
+        "hamstrings",
+        "lower back"
+      ],
+      "equipment": "barbell",
+      "defaultRestSeconds": 180,
+      "images": [
+        "media/barbell-squat-0.jpg",
+        "media/barbell-squat-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Barbell_Squat",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "leg-press",
+      "name": {
+        "pt": "Leg press",
+        "en": "Leg Press"
+      },
+      "instructions": {
+        "pt": [
+          "Sente no equipamento e posicione os pés na plataforma na largura dos ombros.",
+          "Destrave o apoio e desça a plataforma flexionando os joelhos até cerca de 90 graus.",
+          "Empurre a plataforma de volta sem travar completamente os joelhos.",
+          "Mantenha a lombar e o quadril apoiados no banco o tempo todo."
+        ],
+        "en": [
+          "Using a leg press machine, sit down on the machine and place your legs on the platform directly in front of you at a medium (shoulder width) foot stance. (Note: For the purposes of this discussion we will use the medium stance described above which targets overall development; however you can choose any of the three stances described in the foot positioning section).",
+          "Lower the safety bars holding the weighted platform in place and press the platform all the way up until your legs are fully extended in front of you. Tip: Make sure that you do not lock your knees. Your torso and the legs should make a perfect 90-degree angle. This will be your starting position.",
+          "As you inhale, slowly lower the platform until your upper and lower legs make a 90-degree angle.",
+          "Pushing mainly with the heels of your feet and using the quadriceps go back to the starting position as you exhale.",
+          "Repeat for the recommended amount of repetitions and ensure to lock the safety pins properly once you are done. You do not want that platform falling on you fully loaded."
+        ]
+      },
+      "muscleGroup": "legs",
+      "primaryMuscles": [
+        "quadriceps"
+      ],
+      "secondaryMuscles": [
+        "calves",
+        "glutes",
+        "hamstrings"
+      ],
+      "equipment": "machine",
+      "defaultRestSeconds": 120,
+      "images": [
+        "media/leg-press-0.jpg",
+        "media/leg-press-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Leg_Press",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "leg-extension",
+      "name": {
+        "pt": "Cadeira extensora",
+        "en": "Leg Extension"
+      },
+      "instructions": {
+        "pt": [
+          "Sente na cadeira extensora com o rolo apoiado na frente dos tornozelos.",
+          "Estenda as pernas até quase travar os joelhos, contraindo o quadríceps no topo.",
+          "Desça de forma controlada até a posição inicial.",
+          "Evite usar impulso ou levantar o quadril do banco."
+        ],
+        "en": [
+          "For this exercise you will need to use a leg extension machine. First choose your weight and sit on the machine with your legs under the pad (feet pointed forward) and the hands holding the side bars. This will be your starting position. Tip: You will need to adjust the pad so that it falls on top of your lower leg (just above your feet). Also, make sure that your legs form a 90-degree angle between the lower and upper leg. If the angle is less than 90-degrees then that means the knee is over the toes which in turn creates undue stress at the knee joint. If the machine is designed that way, either look for another machine or just make sure that when you start executing the exercise you stop going down once you hit the 90-degree angle.",
+          "Using your quadriceps, extend your legs to the maximum as you exhale. Ensure that the rest of the body remains stationary on the seat. Pause a second on the contracted position.",
+          "Slowly lower the weight back to the original position as you inhale, ensuring that you do not go past the 90-degree angle limit.",
+          "Repeat for the recommended amount of times."
+        ]
+      },
+      "muscleGroup": "legs",
+      "primaryMuscles": [
+        "quadriceps"
+      ],
+      "secondaryMuscles": [],
+      "equipment": "machine",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/leg-extension-0.jpg",
+        "media/leg-extension-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Leg_Extensions",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "lying-leg-curl",
+      "name": {
+        "pt": "Mesa flexora",
+        "en": "Lying Leg Curl"
+      },
+      "instructions": {
+        "pt": [
+          "Deite de bruços na mesa flexora com o rolo apoiado atrás dos tornozelos.",
+          "Flexione os joelhos trazendo o rolo em direção aos glúteos.",
+          "Contraia os posteriores de coxa no topo e desça de forma controlada.",
+          "Mantenha o quadril apoiado no banco durante todo o movimento."
+        ],
+        "en": [
+          "Adjust the machine lever to fit your height and lie face down on the leg curl machine with the pad of the lever on the back of your legs (just a few inches under the calves). Tip: Preferably use a leg curl machine that is angled as opposed to flat since an angled position is more favorable for hamstrings recruitment.",
+          "Keeping the torso flat on the bench, ensure your legs are fully stretched and grab the side handles of the machine. Position your toes straight (or you can also use any of the other two stances described on the foot positioning section). This will be your starting position.",
+          "As you exhale, curl your legs up as far as possible without lifting the upper legs from the pad. Once you hit the fully contracted position, hold it for a second.",
+          "As you inhale, bring the legs back to the initial position. Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "legs",
+      "primaryMuscles": [
+        "hamstrings"
+      ],
+      "secondaryMuscles": [],
+      "equipment": "machine",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/lying-leg-curl-0.jpg",
+        "media/lying-leg-curl-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Lying_Leg_Curls",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "romanian-deadlift",
+      "name": {
+        "pt": "Levantamento terra romeno",
+        "en": "Romanian Deadlift"
+      },
+      "instructions": {
+        "pt": [
+          "Em pé, segure a barra à frente das coxas com pegada pronada.",
+          "Empurre o quadril para trás descendo a barra rente às pernas, com os joelhos levemente flexionados.",
+          "Desça até sentir alongar os posteriores de coxa, mantendo a coluna neutra.",
+          "Suba estendendo o quadril e contraindo os glúteos no topo."
+        ],
+        "en": [
+          "Put a barbell in front of you on the ground and grab it using a pronated (palms facing down) grip that a little wider than shoulder width. Tip: Depending on the weight used, you may need wrist wraps to perform the exercise and also a raised platform in order to allow for better range of motion.",
+          "Bend the knees slightly and keep the shins vertical, hips back and back straight. This will be your starting position.",
+          "Keeping your back and arms completely straight at all times, use your hips to lift the bar as you exhale. Tip: The movement should not be fast but steady and under control.",
+          "Once you are standing completely straight up, lower the bar by pushing the hips back, only slightly bending the knees, unlike when squatting. Tip: Take a deep breath at the start of the movement and keep your chest up. Hold your breath as you lower and exhale as you complete the movement.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "legs",
+      "primaryMuscles": [
+        "hamstrings"
+      ],
+      "secondaryMuscles": [
+        "calves",
+        "glutes",
+        "lower back"
+      ],
+      "equipment": "barbell",
+      "defaultRestSeconds": 120,
+      "images": [
+        "media/romanian-deadlift-0.jpg",
+        "media/romanian-deadlift-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Romanian_Deadlift",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "stiff-legged-deadlift",
+      "name": {
+        "pt": "Stiff com barra",
+        "en": "Stiff-Legged Deadlift"
+      },
+      "instructions": {
+        "pt": [
+          "Segure a barra à frente das coxas, com os pés na largura do quadril e joelhos quase estendidos.",
+          "Incline o tronco à frente a partir do quadril, descendo a barra rente às pernas.",
+          "Desça até o limite do alongamento dos posteriores, sem arredondar a coluna.",
+          "Retorne contraindo glúteos e posteriores até a posição inicial."
+        ],
+        "en": [
+          "Grasp a bar using an overhand grip (palms facing down). You may need some wrist wraps if using a significant amount of weight.",
+          "Stand with your torso straight and your legs spaced using a shoulder width or narrower stance. The knees should be slightly bent. This is your starting position.",
+          "Keeping the knees stationary, lower the barbell to over the top of your feet by bending at the hips while keeping your back straight. Keep moving forward as if you were going to pick something from the floor until you feel a stretch on the hamstrings. Inhale as you perform this movement.",
+          "Start bringing your torso up straight again by extending your hips until you are back at the starting position. Exhale as you perform this movement.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "legs",
+      "primaryMuscles": [
+        "hamstrings"
+      ],
+      "secondaryMuscles": [
+        "glutes",
+        "lower back"
+      ],
+      "equipment": "barbell",
+      "defaultRestSeconds": 120,
+      "images": [
+        "media/stiff-legged-deadlift-0.jpg",
+        "media/stiff-legged-deadlift-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Stiff-Legged_Barbell_Deadlift",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": "22c59ede-970b-43e1-bb51-ac1c2be0b0e0"
+      }
+    },
+    {
+      "id": "dumbbell-lunge",
+      "name": {
+        "pt": "Afundo com halteres",
+        "en": "Dumbbell Lunge"
+      },
+      "instructions": {
+        "pt": [
+          "Em pé, segure um halter em cada mão ao lado do corpo.",
+          "Dê um passo à frente e desça flexionando os dois joelhos até o joelho de trás quase tocar o chão.",
+          "Empurre com a perna da frente para voltar à posição inicial.",
+          "Alterne as pernas mantendo o tronco ereto e o abdômen contraído."
+        ],
+        "en": [
+          "Stand with your torso upright holding two dumbbells in your hands by your sides. This will be your starting position.",
+          "Step forward with your right leg around 2 feet or so from the foot being left stationary behind and lower your upper body down, while keeping the torso upright and maintaining balance. Inhale as you go down. Note: As in the other exercises, do not allow your knee to go forward beyond your toes as you come down, as this will put undue stress on the knee joint. Make sure that you keep your front shin perpendicular to the ground.",
+          "Using mainly the heel of your foot, push up and go back to the starting position as you exhale.",
+          "Repeat the movement for the recommended amount of repetitions and then perform with the left leg."
+        ]
+      },
+      "muscleGroup": "legs",
+      "primaryMuscles": [
+        "quadriceps"
+      ],
+      "secondaryMuscles": [
+        "calves",
+        "glutes",
+        "hamstrings"
+      ],
+      "equipment": "dumbbell",
+      "defaultRestSeconds": 90,
+      "images": [
+        "media/dumbbell-lunge-0.jpg",
+        "media/dumbbell-lunge-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Dumbbell_Lunges",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "goblet-squat",
+      "name": {
+        "pt": "Agachamento goblet",
+        "en": "Goblet Squat"
+      },
+      "instructions": {
+        "pt": [
+          "Segure um kettlebell ou halter junto ao peito, com os cotovelos apontando para baixo.",
+          "Posicione os pés um pouco mais abertos que a largura dos ombros.",
+          "Agache mantendo o tronco ereto até os cotovelos passarem da linha dos joelhos.",
+          "Suba empurrando o chão e mantendo o peso junto ao corpo."
+        ],
+        "en": [
+          "Stand holding a light kettlebell by the horns close to your chest. This will be your starting position.",
+          "Squat down between your legs until your hamstrings are on your calves. Keep your chest and head up and your back straight.",
+          "At the bottom position, pause and use your elbows to push your knees out. Return to the starting position, and repeat for 10-20 repetitions."
+        ]
+      },
+      "muscleGroup": "legs",
+      "primaryMuscles": [
+        "quadriceps"
+      ],
+      "secondaryMuscles": [
+        "calves",
+        "glutes",
+        "hamstrings",
+        "shoulders"
+      ],
+      "equipment": "kettlebell",
+      "defaultRestSeconds": 90,
+      "images": [
+        "media/goblet-squat-0.jpg",
+        "media/goblet-squat-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Goblet_Squat",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "barbell-hip-thrust",
+      "name": {
+        "pt": "Elevação pélvica com barra",
+        "en": "Barbell Hip Thrust"
+      },
+      "instructions": {
+        "pt": [
+          "Apoie a parte superior das costas em um banco e posicione a barra sobre o quadril.",
+          "Com os pés firmes no chão, eleve o quadril até o tronco ficar paralelo ao chão.",
+          "Contraia os glúteos com força no topo do movimento.",
+          "Desça de forma controlada sem relaxar totalmente no chão."
+        ],
+        "en": [
+          "Begin seated on the ground with a bench directly behind you. Have a loaded barbell over your legs. Using a fat bar or having a pad on the bar can greatly reduce the discomfort caused by this exercise.",
+          "Roll the bar so that it is directly above your hips, and lean back against the bench so that your shoulder blades are near the top of it.",
+          "Begin the movement by driving through your feet, extending your hips vertically through the bar. Your weight should be supported by your shoulder blades and your feet. Extend as far as possible, then reverse the motion to return to the starting position."
+        ]
+      },
+      "muscleGroup": "legs",
+      "primaryMuscles": [
+        "glutes"
+      ],
+      "secondaryMuscles": [
+        "calves",
+        "hamstrings"
+      ],
+      "equipment": "barbell",
+      "defaultRestSeconds": 90,
+      "images": [
+        "media/barbell-hip-thrust-0.jpg",
+        "media/barbell-hip-thrust-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Barbell_Hip_Thrust",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "dumbbell-split-squat",
+      "name": {
+        "pt": "Agachamento split com halteres",
+        "en": "Dumbbell Split Squat"
+      },
+      "instructions": {
+        "pt": [
+          "Segure um halter em cada mão e dê um passo à frente, mantendo os pés afastados em tesoura.",
+          "Desça flexionando os dois joelhos até o joelho de trás quase tocar o chão.",
+          "Suba empurrando com a perna da frente, sem juntar os pés.",
+          "Complete as repetições de um lado antes de trocar a perna."
+        ],
+        "en": [
+          "Position yourself into a staggered stance with the rear foot elevated and front foot forward.",
+          "Hold a dumbbell in each hand, letting them hang at the sides. This will be your starting position.",
+          "Begin by descending, flexing your knee and hip to lower your body down. Maintain good posture througout the movement. Keep the front knee in line with the foot as you perform the exercise.",
+          "At the bottom of the movement, drive through the heel to extend the knee and hip to return to the starting position."
+        ]
+      },
+      "muscleGroup": "legs",
+      "primaryMuscles": [
+        "quadriceps"
+      ],
+      "secondaryMuscles": [
+        "glutes",
+        "hamstrings"
+      ],
+      "equipment": "dumbbell",
+      "defaultRestSeconds": 90,
+      "images": [
+        "media/dumbbell-split-squat-0.jpg",
+        "media/dumbbell-split-squat-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Split_Squat_with_Dumbbells",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "standing-calf-raise",
+      "name": {
+        "pt": "Panturrilha em pé na máquina",
+        "en": "Standing Calf Raise"
+      },
+      "instructions": {
+        "pt": [
+          "Posicione os ombros sob o apoio da máquina e a ponta dos pés na plataforma.",
+          "Deixe os calcanhares descerem até sentir alongar a panturrilha.",
+          "Suba na ponta dos pés o mais alto possível, contraindo a panturrilha no topo.",
+          "Execute o movimento de forma lenta, sem quicar."
+        ],
+        "en": [
+          "Adjust the padded lever of the calf raise machine to fit your height.",
+          "Place your shoulders under the pads provided and position your toes facing forward (or using any of the two other positions described at the beginning of the chapter). The balls of your feet should be secured on top of the calf block with the heels extending off it. Push the lever up by extending your hips and knees until your torso is standing erect. The knees should be kept with a slight bend; never locked. Toes should be facing forward, outwards or inwards as described at the beginning of the chapter. This will be your starting position.",
+          "Raise your heels as you breathe out by extending your ankles as high as possible and flexing your calf. Ensure that the knee is kept stationary at all times. There should be no bending at any time. Hold the contracted position by a second before you start to go back down.",
+          "Go back slowly to the starting position as you breathe in by lowering your heels as you bend the ankles until calves are stretched.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "legs",
+      "primaryMuscles": [
+        "calves"
+      ],
+      "secondaryMuscles": [],
+      "equipment": "machine",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/standing-calf-raise-0.jpg",
+        "media/standing-calf-raise-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Standing_Calf_Raises",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "seated-calf-raise",
+      "name": {
+        "pt": "Panturrilha sentado na máquina",
+        "en": "Seated Calf Raise"
+      },
+      "instructions": {
+        "pt": [
+          "Sente na máquina com o apoio sobre as coxas e a ponta dos pés na plataforma.",
+          "Deixe os calcanhares descerem até alongar bem a panturrilha.",
+          "Eleve os calcanhares o máximo possível, contraindo no topo.",
+          "Controle a descida em cada repetição."
+        ],
+        "en": [
+          "Sit on the machine and place your toes on the lower portion of the platform provided with the heels extending off. Choose the toe positioning of your choice (forward, in, or out) as per the beginning of this chapter.",
+          "Place your lower thighs under the lever pad, which will need to be adjusted according to the height of your thighs. Now place your hands on top of the lever pad in order to prevent it from slipping forward.",
+          "Lift the lever slightly by pushing your heels up and release the safety bar. This will be your starting position.",
+          "Slowly lower your heels by bending at the ankles until the calves are fully stretched. Inhale as you perform this movement.",
+          "Raise the heels by extending the ankles as high as possible as you contract the calves and breathe out. Hold the top contraction for a second.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "legs",
+      "primaryMuscles": [
+        "calves"
+      ],
+      "secondaryMuscles": [],
+      "equipment": "machine",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/seated-calf-raise-0.jpg",
+        "media/seated-calf-raise-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Seated_Calf_Raise",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "overhead-press",
+      "name": {
+        "pt": "Desenvolvimento militar em pé com barra",
+        "en": "Overhead Press (Standing)"
+      },
+      "instructions": {
+        "pt": [
+          "Em pé, segure a barra na altura dos ombros com pegada um pouco mais aberta que eles.",
+          "Empurre a barra para cima até estender os braços sobre a cabeça.",
+          "Desça a barra de forma controlada de volta à altura dos ombros.",
+          "Mantenha o abdômen e os glúteos contraídos para não arquear a lombar."
+        ],
+        "en": [
+          "Start by placing a barbell that is about chest high on a squat rack. Once you have selected the weights, grab the barbell using a pronated (palms facing forward) grip. Make sure to grip the bar wider than shoulder width apart from each other.",
+          "Slightly bend the knees and place the barbell on your collar bone. Lift the barbell up keeping it lying on your chest. Take a step back and position your feet shoulder width apart from each other.",
+          "Once you pick up the barbell with the correct grip length, lift the bar up over your head by locking your arms. Hold at about shoulder level and slightly in front of your head. This is your starting position.",
+          "Lower the bar down to the collarbone slowly as you inhale.",
+          "Lift the bar back up to the starting position as you exhale.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "shoulders",
+      "primaryMuscles": [
+        "shoulders"
+      ],
+      "secondaryMuscles": [
+        "triceps"
+      ],
+      "equipment": "barbell",
+      "defaultRestSeconds": 120,
+      "images": [
+        "media/overhead-press-0.jpg",
+        "media/overhead-press-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Standing_Military_Press",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "seated-dumbbell-press",
+      "name": {
+        "pt": "Desenvolvimento sentado com halteres",
+        "en": "Seated Dumbbell Press"
+      },
+      "instructions": {
+        "pt": [
+          "Sente em um banco com encosto e segure um halter em cada mão na altura dos ombros.",
+          "Empurre os halteres para cima até quase se tocarem sobre a cabeça.",
+          "Desça de forma controlada de volta à altura dos ombros.",
+          "Mantenha as costas apoiadas no encosto durante todo o movimento."
+        ],
+        "en": [
+          "Grab a couple of dumbbells and sit on a military press bench or a utility bench that has a back support on it as you place the dumbbells upright on top of your thighs.",
+          "Clean the dumbbells up one at a time by using your thighs to bring the dumbbells up to shoulder height at each side.",
+          "Rotate the wrists so that the palms of your hands are facing forward. This is your starting position.",
+          "As you exhale, push the dumbbells up until they touch at the top.",
+          "After a second pause, slowly come down back to the starting position as you inhale.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "shoulders",
+      "primaryMuscles": [
+        "shoulders"
+      ],
+      "secondaryMuscles": [
+        "triceps"
+      ],
+      "equipment": "dumbbell",
+      "defaultRestSeconds": 90,
+      "images": [
+        "media/seated-dumbbell-press-0.jpg",
+        "media/seated-dumbbell-press-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Seated_Dumbbell_Press",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "lateral-raise",
+      "name": {
+        "pt": "Elevação lateral com halteres",
+        "en": "Lateral Raise"
+      },
+      "instructions": {
+        "pt": [
+          "Em pé, segure um halter em cada mão ao lado do corpo, com os cotovelos levemente flexionados.",
+          "Eleve os braços para os lados até a altura dos ombros.",
+          "Faça uma breve pausa no topo e desça de forma controlada.",
+          "Evite usar impulso ou encolher os ombros durante o movimento."
+        ],
+        "en": [
+          "Pick a couple of dumbbells and stand with a straight torso and the dumbbells by your side at arms length with the palms of the hand facing you. This will be your starting position.",
+          "While maintaining the torso in a stationary position (no swinging), lift the dumbbells to your side with a slight bend on the elbow and the hands slightly tilted forward as if pouring water in a glass. Continue to go up until you arms are parallel to the floor. Exhale as you execute this movement and pause for a second at the top.",
+          "Lower the dumbbells back down slowly to the starting position as you inhale.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "shoulders",
+      "primaryMuscles": [
+        "shoulders"
+      ],
+      "secondaryMuscles": [],
+      "equipment": "dumbbell",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/lateral-raise-0.jpg",
+        "media/lateral-raise-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Side_Lateral_Raise",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "front-raise",
+      "name": {
+        "pt": "Elevação frontal com halteres",
+        "en": "Front Raise"
+      },
+      "instructions": {
+        "pt": [
+          "Em pé, segure os halteres à frente das coxas com as palmas voltadas para o corpo.",
+          "Eleve um ou os dois braços à frente até a altura dos ombros.",
+          "Desça de forma controlada até a posição inicial.",
+          "Mantenha o tronco estável, sem balançar para gerar impulso."
+        ],
+        "en": [
+          "Pick a couple of dumbbells and stand with a straight torso and the dumbbells on front of your thighs at arms length with the palms of the hand facing your thighs. This will be your starting position.",
+          "While maintaining the torso stationary (no swinging), lift the left dumbbell to the front with a slight bend on the elbow and the palms of the hands always facing down. Continue to go up until you arm is slightly above parallel to the floor. Exhale as you execute this portion of the movement and pause for a second at the top. Inhale after the second pause.",
+          "Now lower the dumbbell back down slowly to the starting position as you simultaneously lift the right dumbbell.",
+          "Continue alternating in this fashion until all of the recommended amount of repetitions have been performed for each arm."
+        ]
+      },
+      "muscleGroup": "shoulders",
+      "primaryMuscles": [
+        "shoulders"
+      ],
+      "secondaryMuscles": [],
+      "equipment": "dumbbell",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/front-raise-0.jpg",
+        "media/front-raise-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Front_Dumbbell_Raise",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "reverse-fly",
+      "name": {
+        "pt": "Crucifixo inverso com halteres",
+        "en": "Reverse Fly"
+      },
+      "instructions": {
+        "pt": [
+          "Incline o tronco à frente com a coluna neutra, segurando um halter em cada mão sob o peito.",
+          "Abra os braços para os lados até a altura dos ombros, com os cotovelos levemente flexionados.",
+          "Aperte a parte posterior dos ombros e as escápulas no topo.",
+          "Desça de forma controlada sem balançar o tronco."
+        ],
+        "en": [
+          "To begin, lie down on an incline bench with the chest and stomach pressing against the incline. Have the dumbbells in each hand with the palms facing each other (neutral grip).",
+          "Extend the arms in front of you so that they are perpendicular to the angle of the bench. The legs should be stationary while applying pressure with the ball of your toes. This is the starting position.",
+          "Maintaining the slight bend of the elbows, move the weights out and away from each other (to the side) in an arc motion while exhaling. Tip: Try to squeeze your shoulder blades together to get the best results from this exercise.",
+          "The arms should be elevated until they are parallel to the floor.",
+          "Feel the contraction and slowly lower the weights back down to the starting position while inhaling.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "shoulders",
+      "primaryMuscles": [
+        "shoulders"
+      ],
+      "secondaryMuscles": [],
+      "equipment": "dumbbell",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/reverse-fly-0.jpg",
+        "media/reverse-fly-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Reverse_Flyes",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "face-pull",
+      "name": {
+        "pt": "Face pull na polia",
+        "en": "Face Pull"
+      },
+      "instructions": {
+        "pt": [
+          "Ajuste a polia na altura do rosto e segure a corda com as duas mãos, palmas frente a frente.",
+          "Puxe a corda em direção ao rosto, abrindo os cotovelos para os lados.",
+          "Aperte a parte posterior dos ombros no final do movimento.",
+          "Retorne de forma controlada mantendo o tronco firme."
+        ],
+        "en": [
+          "Facing a high pulley with a rope or dual handles attached, pull the weight directly towards your face, separating your hands as you do so. Keep your upper arms parallel to the ground."
+        ]
+      },
+      "muscleGroup": "shoulders",
+      "primaryMuscles": [
+        "shoulders"
+      ],
+      "secondaryMuscles": [
+        "middle back"
+      ],
+      "equipment": "cable",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/face-pull-0.jpg",
+        "media/face-pull-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Face_Pull",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "barbell-shrug",
+      "name": {
+        "pt": "Encolhimento de ombros com barra",
+        "en": "Barbell Shrug"
+      },
+      "instructions": {
+        "pt": [
+          "Em pé, segure a barra à frente das coxas com os braços estendidos.",
+          "Eleve os ombros em direção às orelhas o mais alto possível.",
+          "Segure a contração por um instante no topo.",
+          "Desça os ombros de forma controlada, sem girá-los."
+        ],
+        "en": [
+          "Stand up straight with your feet at shoulder width as you hold a barbell with both hands in front of you using a pronated grip (palms facing the thighs). Tip: Your hands should be a little wider than shoulder width apart. You can use wrist wraps for this exercise for a better grip. This will be your starting position.",
+          "Raise your shoulders up as far as you can go as you breathe out and hold the contraction for a second. Tip: Refrain from trying to lift the barbell by using your biceps.",
+          "Slowly return to the starting position as you breathe in.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "shoulders",
+      "primaryMuscles": [
+        "traps"
+      ],
+      "secondaryMuscles": [],
+      "equipment": "barbell",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/barbell-shrug-0.jpg",
+        "media/barbell-shrug-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Barbell_Shrug",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": "f956977e-cc05-4db2-a387-ba6140b1ef34"
+      }
+    },
+    {
+      "id": "barbell-curl",
+      "name": {
+        "pt": "Rosca direta com barra",
+        "en": "Barbell Curl"
+      },
+      "instructions": {
+        "pt": [
+          "Em pé, segure a barra com pegada supinada na largura dos ombros.",
+          "Flexione os cotovelos trazendo a barra até a altura dos ombros.",
+          "Contraia o bíceps no topo e desça de forma controlada.",
+          "Mantenha os cotovelos junto ao corpo, sem balançar o tronco."
+        ],
+        "en": [
+          "Stand up with your torso upright while holding a barbell at a shoulder-width grip. The palm of your hands should be facing forward and the elbows should be close to the torso. This will be your starting position.",
+          "While holding the upper arms stationary, curl the weights forward while contracting the biceps as you breathe out. Tip: Only the forearms should move.",
+          "Continue the movement until your biceps are fully contracted and the bar is at shoulder level. Hold the contracted position for a second and squeeze the biceps hard.",
+          "Slowly begin to bring the bar back to starting position as your breathe in.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "biceps",
+      "primaryMuscles": [
+        "biceps"
+      ],
+      "secondaryMuscles": [
+        "forearms"
+      ],
+      "equipment": "barbell",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/barbell-curl-0.jpg",
+        "media/barbell-curl-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Barbell_Curl",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": "7b99a081-6b1a-4aa5-b86a-5a935d083a35"
+      }
+    },
+    {
+      "id": "dumbbell-curl",
+      "name": {
+        "pt": "Rosca alternada com halteres",
+        "en": "Dumbbell Curl"
+      },
+      "instructions": {
+        "pt": [
+          "Em pé, segure um halter em cada mão ao lado do corpo, com as palmas para frente.",
+          "Flexione um cotovelo de cada vez, trazendo o halter até a altura do ombro.",
+          "Contraia o bíceps no topo e desça de forma controlada.",
+          "Mantenha os cotovelos fixos ao lado do tronco."
+        ],
+        "en": [
+          "Stand up straight with a dumbbell in each hand at arm's length. Keep your elbows close to your torso and rotate the palms of your hands until they are facing forward. This will be your starting position.",
+          "Now, keeping the upper arms stationary, exhale and curl the weights while contracting your biceps. Continue to raise the weights until your biceps are fully contracted and the dumbbells are at shoulder level. Hold the contracted position for a brief pause as you squeeze your biceps.",
+          "Then, inhale and slowly begin to lower the dumbbells back to the starting position.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "biceps",
+      "primaryMuscles": [
+        "biceps"
+      ],
+      "secondaryMuscles": [
+        "forearms"
+      ],
+      "equipment": "dumbbell",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/dumbbell-curl-0.jpg",
+        "media/dumbbell-curl-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Dumbbell_Bicep_Curl",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "hammer-curl",
+      "name": {
+        "pt": "Rosca martelo alternada",
+        "en": "Hammer Curl"
+      },
+      "instructions": {
+        "pt": [
+          "Em pé, segure os halteres ao lado do corpo com as palmas voltadas uma para a outra.",
+          "Flexione um cotovelo de cada vez mantendo a pegada neutra, como um martelo.",
+          "Suba até a altura do ombro e contraia o braço no topo.",
+          "Desça de forma controlada e alterne os lados."
+        ],
+        "en": [
+          "Stand up with your torso upright and a dumbbell in each hand being held at arms length. The elbows should be close to the torso.",
+          "The palms of the hands should be facing your torso. This will be your starting position.",
+          "While holding the upper arm stationary, curl the right weight forward while contracting the biceps as you breathe out. Continue the movement until your biceps is fully contracted and the dumbbells are at shoulder level. Hold the contracted position for a second as you squeeze the biceps. Tip: Only the forearms should move.",
+          "Slowly begin to bring the dumbbells back to starting position as your breathe in.",
+          "Repeat the movement with the left hand. This equals one repetition.",
+          "Continue alternating in this manner for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "biceps",
+      "primaryMuscles": [
+        "biceps"
+      ],
+      "secondaryMuscles": [
+        "forearms"
+      ],
+      "equipment": "dumbbell",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/hammer-curl-0.jpg",
+        "media/hammer-curl-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Alternate_Hammer_Curl",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": "c0d9fe98-f4fe-49f3-8037-05e1984e7d2d"
+      }
+    },
+    {
+      "id": "preacher-curl",
+      "name": {
+        "pt": "Rosca scott",
+        "en": "Preacher Curl"
+      },
+      "instructions": {
+        "pt": [
+          "Sente no banco scott com a parte de trás dos braços apoiada na almofada.",
+          "Segure a barra com pegada supinada e os braços estendidos.",
+          "Flexione os cotovelos trazendo a barra até a altura dos ombros.",
+          "Desça de forma controlada até quase estender os braços, sem perder a tensão."
+        ],
+        "en": [
+          "To perform this movement you will need a preacher bench and an E-Z bar. Grab the E-Z curl bar at the close inner handle (either have someone hand you the bar which is preferable or grab the bar from the front bar rest provided by most preacher benches). The palm of your hands should be facing forward and they should be slightly tilted inwards due to the shape of the bar.",
+          "With the upper arms positioned against the preacher bench pad and the chest against it, hold the E-Z Curl Bar at shoulder length. This will be your starting position.",
+          "As you breathe in, slowly lower the bar until your upper arm is extended and the biceps is fully stretched.",
+          "As you exhale, use the biceps to curl the weight up until your biceps is fully contracted and the bar is at shoulder height. Squeeze the biceps hard and hold this position for a second.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "biceps",
+      "primaryMuscles": [
+        "biceps"
+      ],
+      "secondaryMuscles": [],
+      "equipment": "barbell",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/preacher-curl-0.jpg",
+        "media/preacher-curl-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Preacher_Curl",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "concentration-curl",
+      "name": {
+        "pt": "Rosca concentrada",
+        "en": "Concentration Curl"
+      },
+      "instructions": {
+        "pt": [
+          "Sente em um banco, apoie o cotovelo na parte interna da coxa e segure o halter com o braço estendido.",
+          "Flexione o cotovelo trazendo o halter em direção ao ombro.",
+          "Contraia o bíceps no topo do movimento.",
+          "Desça de forma lenta e complete as repetições antes de trocar de braço."
+        ],
+        "en": [
+          "Sit down on a flat bench with one dumbbell in front of you between your legs. Your legs should be spread with your knees bent and feet on the floor.",
+          "Use your right arm to pick the dumbbell up. Place the back of your right upper arm on the top of your inner right thigh. Rotate the palm of your hand until it is facing forward away from your thigh. Tip: Your arm should be extended and the dumbbell should be above the floor. This will be your starting position.",
+          "While holding the upper arm stationary, curl the weights forward while contracting the biceps as you breathe out. Only the forearms should move. Continue the movement until your biceps are fully contracted and the dumbbells are at shoulder level. Tip: At the top of the movement make sure that the little finger of your arm is higher than your thumb. This guarantees a good contraction. Hold the contracted position for a second as you squeeze the biceps.",
+          "Slowly begin to bring the dumbbells back to starting position as your breathe in. Caution: Avoid swinging motions at any time.",
+          "Repeat for the recommended amount of repetitions. Then repeat the movement with the left arm."
+        ]
+      },
+      "muscleGroup": "biceps",
+      "primaryMuscles": [
+        "biceps"
+      ],
+      "secondaryMuscles": [
+        "forearms"
+      ],
+      "equipment": "dumbbell",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/concentration-curl-0.jpg",
+        "media/concentration-curl-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Concentration_Curls",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "triceps-pushdown",
+      "name": {
+        "pt": "Tríceps na polia alta",
+        "en": "Triceps Pushdown"
+      },
+      "instructions": {
+        "pt": [
+          "Em pé, de frente para a polia alta, segure a barra com pegada pronada e os cotovelos junto ao corpo.",
+          "Empurre a barra para baixo até estender completamente os braços.",
+          "Contraia o tríceps no final e retorne de forma controlada até a altura do peito.",
+          "Mantenha os cotovelos fixos ao lado do tronco o tempo todo."
+        ],
+        "en": [
+          "Attach a straight or angled bar to a high pulley and grab with an overhand grip (palms facing down) at shoulder width.",
+          "Standing upright with the torso straight and a very small inclination forward, bring the upper arms close to your body and perpendicular to the floor. The forearms should be pointing up towards the pulley as they hold the bar. This is your starting position.",
+          "Using the triceps, bring the bar down until it touches the front of your thighs and the arms are fully extended perpendicular to the floor. The upper arms should always remain stationary next to your torso and only the forearms should move. Exhale as you perform this movement.",
+          "After a second hold at the contracted position, bring the bar slowly up to the starting point. Breathe in as you perform this step.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "triceps",
+      "primaryMuscles": [
+        "triceps"
+      ],
+      "secondaryMuscles": [],
+      "equipment": "cable",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/triceps-pushdown-0.jpg",
+        "media/triceps-pushdown-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Triceps_Pushdown",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "lying-triceps-extension",
+      "name": {
+        "pt": "Tríceps testa com barra EZ",
+        "en": "Lying Triceps Extension (Skullcrusher)"
+      },
+      "instructions": {
+        "pt": [
+          "Deite no banco reto segurando a barra EZ com os braços estendidos sobre o peito.",
+          "Flexione apenas os cotovelos, descendo a barra em direção à testa.",
+          "Estenda os braços de volta contraindo o tríceps.",
+          "Mantenha os cotovelos apontados para cima, sem abri-los."
+        ],
+        "en": [
+          "Lie on a flat bench with either an e-z bar (my preference) or a straight bar placed on the floor behind your head and your feet on the floor.",
+          "Grab the bar behind you, using a medium overhand (pronated) grip, and raise the bar in front of you at arms length. Tip: The arms should be perpendicular to the torso and the floor. The elbows should be tucked in. This is the starting position.",
+          "As you breathe in, slowly lower the weight until the bar lightly touches your forehead while keeping the upper arms and elbows stationary.",
+          "At that point, use the triceps to bring the weight back up to the starting position as you breathe out.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "triceps",
+      "primaryMuscles": [
+        "triceps"
+      ],
+      "secondaryMuscles": [],
+      "equipment": "ez-bar",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/lying-triceps-extension-0.jpg",
+        "media/lying-triceps-extension-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Lying_Triceps_Press",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "seated-triceps-press",
+      "name": {
+        "pt": "Tríceps francês sentado com halter",
+        "en": "Seated Overhead Triceps Extension"
+      },
+      "instructions": {
+        "pt": [
+          "Sente em um banco e segure um halter com as duas mãos acima da cabeça.",
+          "Flexione os cotovelos descendo o halter atrás da cabeça.",
+          "Estenda os braços de volta contraindo o tríceps no topo.",
+          "Mantenha os cotovelos próximos à cabeça durante todo o movimento."
+        ],
+        "en": [
+          "Sit down on a bench with back support and grasp a dumbbell with both hands and hold it overhead at arm's length. Tip: a better way is to have somebody hand it to you especially if it is very heavy. The resistance should be resting in the palms of your hands with your thumbs around it. The palm of the hand should be facing inward. This will be your starting position.",
+          "Keeping your upper arms close to your head (elbows in) and perpendicular to the floor, lower the resistance in a semi-circular motion behind your head until your forearms touch your biceps. Tip: The upper arms should remain stationary and only the forearms should move. Breathe in as you perform this step.",
+          "Go back to the starting position by using the triceps to raise the dumbbell. Breathe out as you perform this step.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "triceps",
+      "primaryMuscles": [
+        "triceps"
+      ],
+      "secondaryMuscles": [],
+      "equipment": "dumbbell",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/seated-triceps-press-0.jpg",
+        "media/seated-triceps-press-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Seated_Triceps_Press",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "bench-dip",
+      "name": {
+        "pt": "Mergulho entre bancos",
+        "en": "Bench Dip"
+      },
+      "instructions": {
+        "pt": [
+          "Apoie as mãos na borda de um banco atrás do corpo, com as pernas estendidas à frente.",
+          "Desça o corpo flexionando os cotovelos até cerca de 90 graus.",
+          "Empurre o banco até estender os braços de volta.",
+          "Mantenha o corpo próximo ao banco e os ombros longe das orelhas."
+        ],
+        "en": [
+          "For this exercise you will need to place a bench behind your back. With the bench perpendicular to your body, and while looking away from it, hold on to the bench on its edge with the hands fully extended, separated at shoulder width. The legs will be extended forward, bent at the waist and perpendicular to your torso. This will be your starting position.",
+          "Slowly lower your body as you inhale by bending at the elbows until you lower yourself far enough to where there is an angle slightly smaller than 90 degrees between the upper arm and the forearm. Tip: Keep the elbows as close as possible throughout the movement. Forearms should always be pointing down.",
+          "Using your triceps to bring your torso up again, lift yourself back to the starting position.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "triceps",
+      "primaryMuscles": [
+        "triceps"
+      ],
+      "secondaryMuscles": [
+        "chest",
+        "shoulders"
+      ],
+      "equipment": "bodyweight",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/bench-dip-0.jpg",
+        "media/bench-dip-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Bench_Dips",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "close-grip-bench-press",
+      "name": {
+        "pt": "Supino fechado com barra",
+        "en": "Close-Grip Bench Press"
+      },
+      "instructions": {
+        "pt": [
+          "Deite no banco reto e segure a barra com as mãos na largura dos ombros ou um pouco mais fechadas.",
+          "Desça a barra de forma controlada até a parte inferior do peito, com os cotovelos junto ao corpo.",
+          "Empurre a barra para cima até estender os braços, focando o esforço no tríceps.",
+          "Mantenha os punhos firmes e alinhados com os antebraços."
+        ],
+        "en": [
+          "Lie back on a flat bench. Using a close grip (around shoulder width), lift the bar from the rack and hold it straight over you with your arms locked. This will be your starting position.",
+          "As you breathe in, come down slowly until you feel the bar on your middle chest. Tip: Make sure that - as opposed to a regular bench press - you keep the elbows close to the torso at all times in order to maximize triceps involvement.",
+          "After a second pause, bring the bar back to the starting position as you breathe out and push the bar using your triceps muscles. Lock your arms in the contracted position, hold for a second and then start coming down slowly again. Tip: It should take at least twice as long to go down than to come up.",
+          "Repeat the movement for the prescribed amount of repetitions.",
+          "When you are done, place the bar back in the rack."
+        ]
+      },
+      "muscleGroup": "triceps",
+      "primaryMuscles": [
+        "triceps"
+      ],
+      "secondaryMuscles": [
+        "chest",
+        "shoulders"
+      ],
+      "equipment": "barbell",
+      "defaultRestSeconds": 90,
+      "images": [
+        "media/close-grip-bench-press-0.jpg",
+        "media/close-grip-bench-press-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Close-Grip_Barbell_Bench_Press",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "crunch",
+      "name": {
+        "pt": "Abdominal supra (crunch)",
+        "en": "Crunch"
+      },
+      "instructions": {
+        "pt": [
+          "Deite de costas com os joelhos flexionados e os pés apoiados no chão.",
+          "Com as mãos atrás da cabeça ou cruzadas no peito, eleve os ombros do chão contraindo o abdômen.",
+          "Faça uma breve pausa no topo e desça de forma controlada.",
+          "Evite puxar o pescoço com as mãos."
+        ],
+        "en": [
+          "Lie flat on your back with your feet flat on the ground, or resting on a bench with your knees bent at a 90 degree angle. If you are resting your feet on a bench, place them three to four inches apart and point your toes inward so they touch.",
+          "Now place your hands lightly on either side of your head keeping your elbows in. Tip: Don't lock your fingers behind your head.",
+          "While pushing the small of your back down in the floor to better isolate your abdominal muscles, begin to roll your shoulders off the floor.",
+          "Continue to push down as hard as you can with your lower back as you contract your abdominals and exhale. Your shoulders should come up off the floor only about four inches, and your lower back should remain on the floor. At the top of the movement, contract your abdominals hard and keep the contraction for a second. Tip: Focus on slow, controlled movement - don't cheat yourself by using momentum.",
+          "After the one second contraction, begin to come down slowly again to the starting position as you inhale.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "core",
+      "primaryMuscles": [
+        "abdominals"
+      ],
+      "secondaryMuscles": [],
+      "equipment": "bodyweight",
+      "defaultRestSeconds": 45,
+      "images": [
+        "media/crunch-0.jpg",
+        "media/crunch-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Crunches",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": "b186f1f8-4957-44dc-bf30-d0b00064ce6f"
+      }
+    },
+    {
+      "id": "plank",
+      "name": {
+        "pt": "Prancha isométrica",
+        "en": "Plank"
+      },
+      "instructions": {
+        "pt": [
+          "Apoie os antebraços e a ponta dos pés no chão, com o corpo formando uma linha reta.",
+          "Contraia o abdômen e os glúteos, mantendo o quadril alinhado.",
+          "Segure a posição pelo tempo planejado, respirando normalmente.",
+          "Não deixe o quadril cair nem subir demais."
+        ],
+        "en": [
+          "Get into a prone position on the floor, supporting your weight on your toes and your forearms. Your arms are bent and directly below the shoulder.",
+          "Keep your body straight at all times, and hold this position as long as possible. To increase difficulty, an arm or leg can be raised."
+        ]
+      },
+      "muscleGroup": "core",
+      "primaryMuscles": [
+        "abdominals"
+      ],
+      "secondaryMuscles": [],
+      "equipment": "bodyweight",
+      "defaultRestSeconds": 45,
+      "images": [
+        "media/plank-0.jpg",
+        "media/plank-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Plank",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": "c9e57bbe-e839-44c6-861d-1c8dd2845e36"
+      }
+    },
+    {
+      "id": "russian-twist",
+      "name": {
+        "pt": "Rotação russa",
+        "en": "Russian Twist"
+      },
+      "instructions": {
+        "pt": [
+          "Sente no chão com os joelhos flexionados e incline o tronco levemente para trás.",
+          "Com as mãos juntas ou segurando um peso, gire o tronco para um lado e depois para o outro.",
+          "Mantenha o abdômen contraído durante toda a série.",
+          "Para aumentar a dificuldade, eleve os pés do chão."
+        ],
+        "en": [
+          "Lie down on the floor placing your feet either under something that will not move or by having a partner hold them. Your legs should be bent at the knees.",
+          "Elevate your upper body so that it creates an imaginary V-shape with your thighs. Your arms should be fully extended in front of you perpendicular to your torso and with the hands clasped. This is the starting position.",
+          "Twist your torso to the right side until your arms are parallel with the floor while breathing out.",
+          "Hold the contraction for a second and move back to the starting position while breathing out. Now move to the opposite side performing the same techniques you applied to the right side.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "core",
+      "primaryMuscles": [
+        "abdominals"
+      ],
+      "secondaryMuscles": [
+        "lower back"
+      ],
+      "equipment": "bodyweight",
+      "defaultRestSeconds": 45,
+      "images": [
+        "media/russian-twist-0.jpg",
+        "media/russian-twist-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Russian_Twist",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "hanging-leg-raise",
+      "name": {
+        "pt": "Elevação de pernas na barra fixa",
+        "en": "Hanging Leg Raise"
+      },
+      "instructions": {
+        "pt": [
+          "Pendure-se na barra fixa com os braços estendidos.",
+          "Eleve as pernas estendidas (ou os joelhos flexionados) até a altura do quadril ou acima.",
+          "Desça de forma controlada, sem balançar o corpo.",
+          "Contraia o abdômen durante todo o movimento."
+        ],
+        "en": [
+          "Hang from a chin-up bar with both arms extended at arms length in top of you using either a wide grip or a medium grip. The legs should be straight down with the pelvis rolled slightly backwards. This will be your starting position.",
+          "Raise your legs until the torso makes a 90-degree angle with the legs. Exhale as you perform this movement and hold the contraction for a second or so.",
+          "Go back slowly to the starting position as you breathe in.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "core",
+      "primaryMuscles": [
+        "abdominals"
+      ],
+      "secondaryMuscles": [],
+      "equipment": "bodyweight",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/hanging-leg-raise-0.jpg",
+        "media/hanging-leg-raise-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Hanging_Leg_Raise",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "bicycle-crunch",
+      "name": {
+        "pt": "Abdominal bicicleta",
+        "en": "Bicycle Crunch"
+      },
+      "instructions": {
+        "pt": [
+          "Deite de costas com as mãos atrás da cabeça e as pernas elevadas.",
+          "Leve o cotovelo em direção ao joelho oposto enquanto estende a outra perna.",
+          "Alterne os lados em movimento de pedalada, girando o tronco.",
+          "Mantenha a lombar apoiada no chão e o ritmo controlado."
+        ],
+        "en": [
+          "Lie flat on the floor with your lower back pressed to the ground. For this exercise, you will need to put your hands beside your head. Be careful however to not strain with the neck as you perform it. Now lift your shoulders into the crunch position.",
+          "Bring knees up to where they are perpendicular to the floor, with your lower legs parallel to the floor. This will be your starting position.",
+          "Now simultaneously, slowly go through a cycle pedal motion kicking forward with the right leg and bringing in the knee of the left leg. Bring your right elbow close to your left knee by crunching to the side, as you breathe out.",
+          "Go back to the initial position as you breathe in.",
+          "Crunch to the opposite side as you cycle your legs and bring closer your left elbow to your right knee and exhale.",
+          "Continue alternating in this manner until all of the recommended repetitions for each side have been completed."
+        ]
+      },
+      "muscleGroup": "core",
+      "primaryMuscles": [
+        "abdominals"
+      ],
+      "secondaryMuscles": [],
+      "equipment": "bodyweight",
+      "defaultRestSeconds": 45,
+      "images": [
+        "media/bicycle-crunch-0.jpg",
+        "media/bicycle-crunch-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Air_Bike",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "cable-crunch",
+      "name": {
+        "pt": "Abdominal na polia alta",
+        "en": "Cable Crunch"
+      },
+      "instructions": {
+        "pt": [
+          "Ajoelhe de frente para a polia alta segurando a corda ao lado da cabeça.",
+          "Flexione o tronco para baixo contraindo o abdômen, levando os cotovelos em direção aos joelhos.",
+          "Retorne de forma controlada sem estender demais a lombar.",
+          "O movimento deve vir do abdômen, não dos braços."
+        ],
+        "en": [
+          "Kneel below a high pulley that contains a rope attachment.",
+          "Grasp cable rope attachment and lower the rope until your hands are placed next to your face.",
+          "Flex your hips slightly and allow the weight to hyperextend the lower back. This will be your starting position.",
+          "With the hips stationary, flex the waist as you contract the abs so that the elbows travel towards the middle of the thighs. Exhale as you perform this portion of the movement and hold the contraction for a second.",
+          "Slowly return to the starting position as you inhale. Tip: Make sure that you keep constant tension on the abs throughout the movement. Also, do not choose a weight so heavy that the lower back handles the brunt of the work.",
+          "Repeat for the recommended amount of repetitions."
+        ]
+      },
+      "muscleGroup": "core",
+      "primaryMuscles": [
+        "abdominals"
+      ],
+      "secondaryMuscles": [],
+      "equipment": "cable",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/cable-crunch-0.jpg",
+        "media/cable-crunch-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Cable_Crunch",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "ab-rollout",
+      "name": {
+        "pt": "Abdominal com roda (ab wheel)",
+        "en": "Ab Wheel Rollout"
+      },
+      "instructions": {
+        "pt": [
+          "Ajoelhe no chão segurando a roda abdominal com as duas mãos.",
+          "Role a roda à frente estendendo o corpo, mantendo o abdômen contraído.",
+          "Avance até onde conseguir manter a lombar estável, sem deixá-la arquear.",
+          "Retorne contraindo o abdômen até a posição inicial."
+        ],
+        "en": [
+          "Hold the Ab Roller with both hands and kneel on the floor.",
+          "Now place the ab roller on the floor in front of you so that you are on all your hands and knees (as in a kneeling push up position). This will be your starting position.",
+          "Slowly roll the ab roller straight forward, stretching your body into a straight position. Tip: Go down as far as you can without touching the floor with your body. Breathe in during this portion of the movement.",
+          "After a pause at the stretched position, start pulling yourself back to the starting position as you breathe out. Tip: Go slowly and keep your abs tight at all times."
+        ]
+      },
+      "muscleGroup": "core",
+      "primaryMuscles": [
+        "abdominals"
+      ],
+      "secondaryMuscles": [
+        "shoulders"
+      ],
+      "equipment": "other",
+      "defaultRestSeconds": 60,
+      "images": [
+        "media/ab-rollout-0.jpg",
+        "media/ab-rollout-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Ab_Roller",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": null
+      }
+    },
+    {
+      "id": "mountain-climbers",
+      "name": {
+        "pt": "Escalador (mountain climbers)",
+        "en": "Mountain Climbers"
+      },
+      "instructions": {
+        "pt": [
+          "Comece na posição de prancha alta, com as mãos sob os ombros.",
+          "Traga um joelho em direção ao peito e retorne, alternando as pernas em ritmo constante.",
+          "Mantenha o quadril baixo e o abdômen contraído.",
+          "Controle a respiração e o ritmo conforme o objetivo da série."
+        ],
+        "en": [
+          "Begin in a pushup position, with your weight supported by your hands and toes. Flexing the knee and hip, bring one leg until the knee is approximately under the hip. This will be your starting position.",
+          "Explosively reverse the positions of your legs, extending the bent leg until the leg is straight and supported by the toe, and bringing the other foot up with the hip and knee flexed. Repeat in an alternating fashion for 20-30 seconds."
+        ]
+      },
+      "muscleGroup": "core",
+      "primaryMuscles": [
+        "quadriceps"
+      ],
+      "secondaryMuscles": [
+        "chest",
+        "hamstrings",
+        "shoulders"
+      ],
+      "equipment": "bodyweight",
+      "defaultRestSeconds": 45,
+      "images": [
+        "media/mountain-climbers-0.jpg",
+        "media/mountain-climbers-1.jpg"
+      ],
+      "video": null,
+      "videoUrl": null,
+      "source": {
+        "en": {
+          "provider": "free-exercise-db",
+          "id": "Mountain_Climbers",
+          "license": "Unlicense"
+        },
+        "pt": {
+          "provider": "trainer-buddy-curated",
+          "license": "CC0-1.0"
+        },
+        "images": {
+          "provider": "free-exercise-db",
+          "license": "Unlicense"
+        },
+        "wgerUuid": "53324f8e-df38-456f-9b7d-8f3a43f45f31"
+      }
+    }
+  ]
+}
