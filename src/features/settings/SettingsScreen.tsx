@@ -1,4 +1,5 @@
 import { ScrollView, StyleSheet, Text } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 import { useSettings } from '../../core/settings/SettingsContext';
 import { useTheme } from '../../core/theme/ThemeContext';
@@ -10,12 +11,16 @@ export function SettingsScreen() {
   const { t } = useTranslation();
   const { settings, setSetting } = useSettings();
   const theme = useTheme();
+  const insets = useSafeAreaInsets();
 
   const sectionStyle = [styles.section, { color: theme.colorText }];
 
   return (
     <Screen>
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: insets.bottom + 16 }}
+      >
         <Text style={sectionStyle}>{t('settings.language')}</Text>
         <PillSelector
           options={[

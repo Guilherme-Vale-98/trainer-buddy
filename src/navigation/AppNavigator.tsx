@@ -11,10 +11,13 @@ import { PlanScreen } from '../features/plan/PlanScreen';
 import { HistoryScreen } from '../features/history/HistoryScreen';
 import { ProgressScreen } from '../features/progress/ProgressScreen';
 import { SettingsScreen } from '../features/settings/SettingsScreen';
+import { PlanBuilderScreen } from '../features/plan-builder/PlanBuilderScreen';
+import type { WorkoutPlan } from '../core/db/models';
 
 export type RootStackParamList = {
   Tabs: undefined;
   Settings: undefined;
+  PlanBuilder: { plan?: WorkoutPlan };
 };
 
 const Tab = createBottomTabNavigator();
@@ -81,6 +84,7 @@ export function AppNavigator() {
     <NavigationContainer theme={navTheme}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Tabs" component={Tabs} />
+        <Stack.Screen name="PlanBuilder" component={PlanBuilderScreen} />
         <Stack.Screen
           name="Settings"
           component={SettingsScreen}

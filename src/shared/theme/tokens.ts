@@ -15,6 +15,7 @@ export interface Theme {
   colorOnAccent: string;
   colorTrack: string;
   colorDivider: string;
+  colorDanger: string;
 }
 
 export const darkTheme: Theme = {
@@ -34,6 +35,7 @@ export const darkTheme: Theme = {
   colorOnAccent: '#232323',
   colorTrack: '#D9D9D9',
   colorDivider: '#3D3C3C',
+  colorDanger: '#FF7A7A',
 };
 
 export const lightTheme: Theme = {
@@ -53,6 +55,7 @@ export const lightTheme: Theme = {
   colorOnAccent: '#232323',
   colorTrack: '#DAD8E4',
   colorDivider: '#E4E2EC',
+  colorDanger: '#C0392B',
 };
 
 export const fonts = {

@@ -1,15 +1,36 @@
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { useCallback, useState } from 'react';
+import { Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { getAllExercises, getExerciseImages, getExerciseName } from '../../core/catalog/catalog';
+import { planRepository } from '../../core/db/plan.repository';
+import type { WorkoutPlan } from '../../core/db/models';
 import { useSettings } from '../../core/settings/SettingsContext';
 import { useTheme } from '../../core/theme/ThemeContext';
 import { Screen } from '../../shared/components/Screen';
 import { fonts } from '../../shared/theme/tokens';
+import type { RootStackParamList } from '../../navigation/AppNavigator';
 
 export function DashboardScreen() {
   const { t } = useTranslation();
   const { settings } = useSettings();
   const theme = useTheme();
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
+  const [plan, setPlan] = useState<WorkoutPlan | null>(null);
+
+  useFocusEffect(
+    useCallback(() => {
+      let active = true;
+      planRepository.getActivePlan().then((loaded) => {
+        if (active) setPlan(loaded);
+      });
+      return () => {
+        active = false;
+      };
+    }, []),
+  );
 
   const exercises = getAllExercises();
   const sample = exercises[0];
@@ -19,12 +40,17 @@ export function DashboardScreen() {
     <Screen title={t('dashboard.title')}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={[styles.card, { backgroundColor: theme.colorSurfaceTint }]}>
-          <Text style={[styles.cardTitle, { color: theme.colorText }]}>{t('dashboard.noPlan')}</Text>
-          <View style={[styles.cta, { backgroundColor: theme.colorPrimary }]}>
+          <Text style={[styles.cardTitle, { color: theme.colorText }]}>
+            {plan ? plan.name : t('dashboard.noPlan')}
+          </Text>
+          <Pressable
+            onPress={() => navigation.navigate('PlanBuilder', plan ? { plan } : {})}
+            style={[styles.cta, { backgroundColor: theme.colorPrimary }]}
+          >
             <Text style={[styles.ctaLabel, { color: theme.colorOnPrimary }]}>
-              {t('dashboard.createPlan')}
+              {plan ? t('plan.edit') : t('dashboard.createPlan')}
             </Text>
-          </View>
+          </Pressable>
         </View>
 
         <View style={[styles.mediaCard, { backgroundColor: theme.colorPrimarySoft }]}>

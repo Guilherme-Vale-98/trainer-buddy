@@ -1,20 +1,101 @@
-import { StyleSheet, Text } from 'react-native';
+import { useCallback, useState } from 'react';
+import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
+import { getExercise, getExerciseName } from '../../core/catalog/catalog';
+import { planRepository } from '../../core/db/plan.repository';
+import type { WorkoutPlan } from '../../core/db/models';
+import { useSettings } from '../../core/settings/SettingsContext';
 import { useTheme } from '../../core/theme/ThemeContext';
+import { formatExerciseSummary } from '../../shared/format';
 import { Screen } from '../../shared/components/Screen';
 import { fonts } from '../../shared/theme/tokens';
+import type { RootStackParamList } from '../../navigation/AppNavigator';
 
 export function PlanScreen() {
   const { t } = useTranslation();
+  const { settings } = useSettings();
   const theme = useTheme();
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
+  const [plan, setPlan] = useState<WorkoutPlan | null>(null);
+
+  useFocusEffect(
+    useCallback(() => {
+      let active = true;
+      planRepository.getActivePlan().then((loaded) => {
+        if (active) setPlan(loaded);
+      });
+      return () => {
+        active = false;
+      };
+    }, []),
+  );
 
   return (
     <Screen title={t('plan.title')}>
-      <Text style={[styles.empty, { color: theme.colorTextMuted }]}>{t('plan.empty')}</Text>
+      {plan ? (
+        <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.scroll}>
+          <View style={styles.planHeader}>
+            <Text style={[styles.planName, { color: theme.colorText }]}>{plan.name}</Text>
+            <Pressable
+              onPress={() => navigation.navigate('PlanBuilder', { plan })}
+              style={[styles.editButton, { backgroundColor: theme.colorAccent }]}
+            >
+              <Text style={[styles.editLabel, { color: theme.colorOnAccent }]}>{t('plan.edit')}</Text>
+            </Pressable>
+          </View>
+          {plan.workoutSets.map((set) => (
+            <View key={set.id} style={[styles.setCard, { backgroundColor: theme.colorSurfaceTint }]}>
+              <Text style={[styles.setName, { color: theme.colorPrimaryStrong }]}>{set.name}</Text>
+              {set.exercises.map((exercise) => {
+                const catalogExercise = getExercise(exercise.catalogExerciseId);
+                return (
+                  <View key={exercise.catalogExerciseId} style={styles.exerciseRow}>
+                    <Text style={[styles.exerciseName, { color: theme.colorText }]} numberOfLines={1}>
+                      {catalogExercise
+                        ? getExerciseName(catalogExercise, settings.language)
+                        : exercise.catalogExerciseId}
+                    </Text>
+                    <Text style={[styles.exerciseSummary, { color: theme.colorTextMuted }]}>
+                      {formatExerciseSummary(exercise)}
+                    </Text>
+                  </View>
+                );
+              })}
+            </View>
+          ))}
+        </ScrollView>
+      ) : (
+        <View>
+          <Text style={[styles.empty, { color: theme.colorTextMuted }]}>{t('plan.empty')}</Text>
+          <Pressable
+            onPress={() => navigation.navigate('PlanBuilder', {})}
+            style={[styles.createButton, { backgroundColor: theme.colorPrimary }]}
+          >
+            <Text style={[styles.createLabel, { color: theme.colorOnPrimary }]}>
+              {t('dashboard.createPlan')}
+            </Text>
+          </Pressable>
+        </View>
+      )}
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  empty: { fontFamily: fonts.body, fontSize: 14 },
+  scroll: { paddingBottom: 32 },
+  planHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 },
+  planName: { flex: 1, fontFamily: fonts.title, fontSize: 18 },
+  editButton: { borderRadius: 999, paddingHorizontal: 16, paddingVertical: 8 },
+  editLabel: { fontFamily: fonts.label, fontSize: 13 },
+  setCard: { borderRadius: 18, padding: 14, marginBottom: 12 },
+  setName: { fontFamily: fonts.subtitle, fontSize: 15, marginBottom: 8 },
+  exerciseRow: { marginBottom: 8 },
+  exerciseName: { fontFamily: fonts.bodyStrong, fontSize: 14 },
+  exerciseSummary: { fontFamily: fonts.body, fontSize: 12, marginTop: 2 },
+  empty: { fontFamily: fonts.body, fontSize: 14, marginBottom: 16 },
+  createButton: { borderRadius: 999, paddingVertical: 14, alignItems: 'center' },
+  createLabel: { fontFamily: fonts.label, fontSize: 15 },
 });
