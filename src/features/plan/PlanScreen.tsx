@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { getExercise, getExerciseName } from '../../core/catalog/catalog';
 import { planRepository } from '../../core/db/plan.repository';
 import type { WorkoutPlan } from '../../core/db/models';
+import { useStartWorkout } from '../session/useStartWorkout';
 import { useSettings } from '../../core/settings/SettingsContext';
 import { useTheme } from '../../core/theme/ThemeContext';
 import { formatExerciseSummary } from '../../shared/format';
@@ -18,6 +19,7 @@ export function PlanScreen() {
   const { settings } = useSettings();
   const theme = useTheme();
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+  const startWorkout = useStartWorkout();
 
   const [plan, setPlan] = useState<WorkoutPlan | null>(null);
 
@@ -48,7 +50,17 @@ export function PlanScreen() {
           </View>
           {plan.workoutSets.map((set) => (
             <View key={set.id} style={[styles.setCard, { backgroundColor: theme.colorSurfaceTint }]}>
-              <Text style={[styles.setName, { color: theme.colorPrimaryStrong }]}>{set.name}</Text>
+              <View style={styles.setHeader}>
+                <Text style={[styles.setName, { color: theme.colorPrimaryStrong }]}>{set.name}</Text>
+                <Pressable
+                  onPress={() => void startWorkout(plan, set.id)}
+                  style={[styles.startButton, { backgroundColor: theme.colorPrimary }]}
+                >
+                  <Text style={[styles.startLabel, { color: theme.colorOnPrimary }]}>
+                    {t('session.start')}
+                  </Text>
+                </Pressable>
+              </View>
               {set.exercises.map((exercise) => {
                 const catalogExercise = getExercise(exercise.catalogExerciseId);
                 return (
@@ -91,7 +103,10 @@ const styles = StyleSheet.create({
   editButton: { borderRadius: 999, paddingHorizontal: 16, paddingVertical: 8 },
   editLabel: { fontFamily: fonts.label, fontSize: 13 },
   setCard: { borderRadius: 18, padding: 14, marginBottom: 12 },
-  setName: { fontFamily: fonts.subtitle, fontSize: 15, marginBottom: 8 },
+  setHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 },
+  setName: { flex: 1, fontFamily: fonts.subtitle, fontSize: 15 },
+  startButton: { borderRadius: 999, paddingHorizontal: 14, paddingVertical: 7 },
+  startLabel: { fontFamily: fonts.label, fontSize: 12 },
   exerciseRow: { marginBottom: 8 },
   exerciseName: { fontFamily: fonts.bodyStrong, fontSize: 14 },
   exerciseSummary: { fontFamily: fonts.body, fontSize: 12, marginTop: 2 },

@@ -5,7 +5,8 @@ import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { getAllExercises, getExerciseImages, getExerciseName } from '../../core/catalog/catalog';
 import { planRepository } from '../../core/db/plan.repository';
-import type { WorkoutPlan } from '../../core/db/models';
+import { sessionRepository } from '../../core/db/session.repository';
+import type { WorkoutPlan, WorkoutSession } from '../../core/db/models';
 import { useSettings } from '../../core/settings/SettingsContext';
 import { useTheme } from '../../core/theme/ThemeContext';
 import { Screen } from '../../shared/components/Screen';
@@ -19,13 +20,18 @@ export function DashboardScreen() {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   const [plan, setPlan] = useState<WorkoutPlan | null>(null);
+  const [inProgress, setInProgress] = useState<WorkoutSession | null>(null);
 
   useFocusEffect(
     useCallback(() => {
       let active = true;
-      planRepository.getActivePlan().then((loaded) => {
-        if (active) setPlan(loaded);
-      });
+      Promise.all([planRepository.getActivePlan(), sessionRepository.getInProgressSession()]).then(
+        ([loadedPlan, loadedSession]) => {
+          if (!active) return;
+          setPlan(loadedPlan);
+          setInProgress(loadedSession);
+        },
+      );
       return () => {
         active = false;
       };
@@ -39,6 +45,21 @@ export function DashboardScreen() {
   return (
     <Screen title={t('dashboard.title')}>
       <ScrollView showsVerticalScrollIndicator={false}>
+        {inProgress ? (
+          <Pressable
+            onPress={() => navigation.navigate('Session', { sessionId: inProgress.id })}
+            style={[styles.card, { backgroundColor: theme.colorAccent }]}
+          >
+            <Text style={[styles.cardTitle, { color: theme.colorOnAccent }]}>
+              {t('session.inProgressTitle')} — {inProgress.workoutSetName}
+            </Text>
+            <View style={[styles.cta, { backgroundColor: theme.colorPrimary }]}>
+              <Text style={[styles.ctaLabel, { color: theme.colorOnPrimary }]}>
+                {t('session.resume')}
+              </Text>
+            </View>
+          </Pressable>
+        ) : null}
         <View style={[styles.card, { backgroundColor: theme.colorSurfaceTint }]}>
           <Text style={[styles.cardTitle, { color: theme.colorText }]}>
             {plan ? plan.name : t('dashboard.noPlan')}
