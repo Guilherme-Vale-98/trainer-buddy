@@ -13,6 +13,7 @@ import { ProgressScreen } from '../features/progress/ProgressScreen';
 import { SettingsScreen } from '../features/settings/SettingsScreen';
 import { PlanBuilderScreen } from '../features/plan-builder/PlanBuilderScreen';
 import { SessionScreen } from '../features/session/SessionScreen';
+import { SessionDetailScreen } from '../features/history/SessionDetailScreen';
 import type { WorkoutPlan } from '../core/db/models';
 
 export type RootStackParamList = {
@@ -20,6 +21,7 @@ export type RootStackParamList = {
   Settings: undefined;
   PlanBuilder: { plan?: WorkoutPlan };
   Session: { sessionId: string };
+  SessionDetail: { sessionId: string };
 };
 
 const Tab = createBottomTabNavigator();
@@ -88,6 +90,18 @@ export function AppNavigator() {
         <Stack.Screen name="Tabs" component={Tabs} />
         <Stack.Screen name="PlanBuilder" component={PlanBuilderScreen} />
         <Stack.Screen name="Session" component={SessionScreen} />
+        <Stack.Screen
+          name="SessionDetail"
+          component={SessionDetailScreen}
+          options={{
+            headerShown: true,
+            headerTitle: '',
+            headerStyle: { backgroundColor: theme.colorBg },
+            headerShadowVisible: false,
+            headerTintColor: theme.colorPrimaryStrong,
+            headerTitleStyle: { fontFamily: fonts.subtitle, fontSize: 20, color: theme.colorPrimaryStrong },
+          }}
+        />
         <Stack.Screen
           name="Settings"
           component={SettingsScreen}
