@@ -10,15 +10,16 @@
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#896CFE"
     },
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "package": "com.guilherme.trainerbuddy",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#896CFE"
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
