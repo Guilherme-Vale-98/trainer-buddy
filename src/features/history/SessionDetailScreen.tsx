@@ -61,7 +61,7 @@ export function SessionDetailScreen({ navigation, route }: Props) {
         return (
           <View
             key={planExercise.catalogExerciseId}
-            style={[styles.card, { backgroundColor: theme.colorSurfaceTint }]}
+            style={[styles.card, { backgroundColor: theme.colorSurfaceTint, shadowColor: theme.colorShadow }]}
           >
             <Text style={[styles.exerciseName, { color: theme.colorText }]}>
               {catalogExercise
@@ -95,7 +95,15 @@ export function SessionDetailScreen({ navigation, route }: Props) {
 const styles = StyleSheet.create({
   content: { paddingHorizontal: 20, paddingTop: 8 },
   date: { fontFamily: fonts.body, fontSize: 13, marginBottom: 12 },
-  card: { borderRadius: 18, padding: 14, marginBottom: 12 },
+  card: {
+    borderRadius: 18,
+    padding: 14,
+    marginBottom: 12,
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.16,
+    shadowRadius: 14,
+    elevation: 3,
+  },
   exerciseName: { fontFamily: fonts.subtitle, fontSize: 15 },
   target: { fontFamily: fonts.body, fontSize: 12, marginTop: 2, marginBottom: 8 },
   setRow: { flexDirection: 'row', alignItems: 'center', gap: 10, marginBottom: 4 },

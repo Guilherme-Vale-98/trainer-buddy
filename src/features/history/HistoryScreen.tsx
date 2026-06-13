@@ -56,7 +56,7 @@ export function HistoryScreen() {
   };
 
   return (
-    <Screen title={t('history.title')}>
+    <Screen title={t('history.title')} padded={false}>
       {sessions.length === 0 ? (
         <Text style={[styles.empty, { color: theme.colorTextMuted }]}>{t('history.empty')}</Text>
       ) : (
@@ -68,7 +68,7 @@ export function HistoryScreen() {
           renderItem={({ item }) => (
             <Pressable
               onPress={() => navigation.navigate('SessionDetail', { sessionId: item.id })}
-              style={[styles.card, { backgroundColor: theme.colorSurfaceTint }]}
+              style={[styles.card, { backgroundColor: theme.colorSurfaceTint, shadowColor: theme.colorShadow }]}
             >
               <View style={styles.cardBody}>
                 <Text style={[styles.setName, { color: theme.colorText }]}>{item.workoutSetName}</Text>
@@ -89,9 +89,19 @@ export function HistoryScreen() {
 }
 
 const styles = StyleSheet.create({
-  empty: { fontFamily: fonts.body, fontSize: 14 },
-  list: { paddingBottom: 24 },
-  card: { flexDirection: 'row', alignItems: 'center', borderRadius: 18, padding: 14, marginBottom: 10 },
+  empty: { fontFamily: fonts.body, fontSize: 14, paddingHorizontal: 20 },
+  list: { paddingHorizontal: 20, paddingTop: 4, paddingBottom: 24 },
+  card: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderRadius: 18,
+    padding: 14,
+    marginBottom: 10,
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.16,
+    shadowRadius: 14,
+    elevation: 3,
+  },
   cardBody: { flex: 1 },
   setName: { fontFamily: fonts.subtitle, fontSize: 15 },
   meta: { fontFamily: fonts.body, fontSize: 12, marginTop: 4 },

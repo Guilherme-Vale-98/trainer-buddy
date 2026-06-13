@@ -3,20 +3,18 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
-import { getExercise, getExerciseName } from '../../core/catalog/catalog';
+import { getExercise } from '../../core/catalog/catalog';
 import { planRepository } from '../../core/db/plan.repository';
 import type { WorkoutPlan } from '../../core/db/models';
 import { useStartWorkout } from '../session/useStartWorkout';
-import { useSettings } from '../../core/settings/SettingsContext';
 import { useTheme } from '../../core/theme/ThemeContext';
-import { formatExerciseSummary } from '../../shared/format';
 import { Screen } from '../../shared/components/Screen';
 import { fonts } from '../../shared/theme/tokens';
+import { workoutSetMuscleGroups } from './plan-logic';
 import type { RootStackParamList } from '../../navigation/AppNavigator';
 
 export function PlanScreen() {
   const { t } = useTranslation();
-  const { settings } = useSettings();
   const theme = useTheme();
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
   const startWorkout = useStartWorkout();
@@ -36,7 +34,7 @@ export function PlanScreen() {
   );
 
   return (
-    <Screen title={t('plan.title')}>
+    <Screen title={t('plan.title')} padded={false}>
       {plan ? (
         <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.scroll}>
           <View style={styles.planHeader}>
@@ -49,7 +47,10 @@ export function PlanScreen() {
             </Pressable>
           </View>
           {plan.workoutSets.map((set) => (
-            <View key={set.id} style={[styles.setCard, { backgroundColor: theme.colorSurfaceTint }]}>
+            <View
+              key={set.id}
+              style={[styles.setCard, { backgroundColor: theme.colorSurfaceTint, shadowColor: theme.colorShadow }]}
+            >
               <View style={styles.setHeader}>
                 <Text style={[styles.setName, { color: theme.colorPrimaryStrong }]}>{set.name}</Text>
                 <Pressable
@@ -61,26 +62,25 @@ export function PlanScreen() {
                   </Text>
                 </Pressable>
               </View>
-              {set.exercises.map((exercise) => {
-                const catalogExercise = getExercise(exercise.catalogExerciseId);
-                return (
-                  <View key={exercise.catalogExerciseId} style={styles.exerciseRow}>
-                    <Text style={[styles.exerciseName, { color: theme.colorText }]} numberOfLines={1}>
-                      {catalogExercise
-                        ? getExerciseName(catalogExercise, settings.language)
-                        : exercise.catalogExerciseId}
-                    </Text>
-                    <Text style={[styles.exerciseSummary, { color: theme.colorTextMuted }]}>
-                      {formatExerciseSummary(exercise)}
-                    </Text>
-                  </View>
-                );
-              })}
+              <View style={styles.muscleRow}>
+                {workoutSetMuscleGroups(set.exercises, (id) => getExercise(id)?.muscleGroup).map(
+                  (group) => (
+                    <View
+                      key={group}
+                      style={[styles.muscleChip, { backgroundColor: theme.colorPrimarySoft }]}
+                    >
+                      <Text style={[styles.muscleChipLabel, { color: theme.colorOnAccent }]}>
+                        {t(`muscle.${group}`)}
+                      </Text>
+                    </View>
+                  ),
+                )}
+              </View>
             </View>
           ))}
         </ScrollView>
       ) : (
-        <View>
+        <View style={styles.emptyWrap}>
           <Text style={[styles.empty, { color: theme.colorTextMuted }]}>{t('plan.empty')}</Text>
           <Pressable
             onPress={() => navigation.navigate('PlanBuilder', {})}
@@ -97,19 +97,28 @@ export function PlanScreen() {
 }
 
 const styles = StyleSheet.create({
-  scroll: { paddingBottom: 32 },
+  scroll: { paddingHorizontal: 20, paddingTop: 4, paddingBottom: 32 },
+  emptyWrap: { paddingHorizontal: 20 },
   planHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 },
   planName: { flex: 1, fontFamily: fonts.title, fontSize: 18 },
   editButton: { borderRadius: 999, paddingHorizontal: 16, paddingVertical: 8 },
   editLabel: { fontFamily: fonts.label, fontSize: 13 },
-  setCard: { borderRadius: 18, padding: 14, marginBottom: 12 },
+  setCard: {
+    borderRadius: 18,
+    padding: 14,
+    marginBottom: 12,
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.16,
+    shadowRadius: 14,
+    elevation: 3,
+  },
   setHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 },
   setName: { flex: 1, fontFamily: fonts.subtitle, fontSize: 15 },
   startButton: { borderRadius: 999, paddingHorizontal: 14, paddingVertical: 7 },
   startLabel: { fontFamily: fonts.label, fontSize: 12 },
-  exerciseRow: { marginBottom: 8 },
-  exerciseName: { fontFamily: fonts.bodyStrong, fontSize: 14 },
-  exerciseSummary: { fontFamily: fonts.body, fontSize: 12, marginTop: 2 },
+  muscleRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
+  muscleChip: { borderRadius: 999, paddingHorizontal: 12, paddingVertical: 5 },
+  muscleChipLabel: { fontFamily: fonts.label, fontSize: 11, letterSpacing: 0.5, textTransform: 'uppercase' },
   empty: { fontFamily: fonts.body, fontSize: 14, marginBottom: 16 },
   createButton: { borderRadius: 999, paddingVertical: 14, alignItems: 'center' },
   createLabel: { fontFamily: fonts.label, fontSize: 15 },

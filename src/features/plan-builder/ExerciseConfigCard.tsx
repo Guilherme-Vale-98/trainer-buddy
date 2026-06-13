@@ -36,7 +36,7 @@ export function ExerciseConfigCard({ draft, errors, onPatch, onRemove }: Exercis
   const labelStyle = [styles.label, { color: theme.colorTextMuted }];
 
   return (
-    <View style={[styles.card, { backgroundColor: theme.colorSurfaceTint }]}>
+    <View style={[styles.card, { backgroundColor: theme.colorSurfaceTint, shadowColor: theme.colorShadow }]}>
       <View style={styles.header}>
         {image ? <Image source={image} style={styles.thumb} /> : <View style={[styles.thumb, { backgroundColor: theme.colorPrimarySoft }]} />}
         <Text style={[styles.name, { color: theme.colorText }]} numberOfLines={2}>
@@ -130,7 +130,15 @@ export function ExerciseConfigCard({ draft, errors, onPatch, onRemove }: Exercis
 }
 
 const styles = StyleSheet.create({
-  card: { borderRadius: 20, padding: 14, marginBottom: 12 },
+  card: {
+    borderRadius: 20,
+    padding: 14,
+    marginBottom: 12,
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.16,
+    shadowRadius: 14,
+    elevation: 3,
+  },
   header: { flexDirection: 'row', alignItems: 'center', gap: 10, marginBottom: 10 },
   thumb: { width: 52, height: 52, borderRadius: 12 },
   name: { flex: 1, fontFamily: fonts.subtitle, fontSize: 14 },

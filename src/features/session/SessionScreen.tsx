@@ -212,17 +212,17 @@ export function SessionScreen({ navigation, route }: Props) {
       <ScrollView
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled"
-        contentContainerStyle={{ paddingBottom: insets.bottom + 24 }}
+        contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: insets.bottom + 24 }}
       >
         {complete ? (
-          <View style={[styles.banner, { backgroundColor: theme.colorAccent }]}>
+          <View style={[styles.banner, styles.cardShadow, { backgroundColor: theme.colorAccent, shadowColor: theme.colorShadow }]}>
             <Text style={[styles.bannerText, { color: theme.colorOnAccent }]}>
               {t('session.completeBanner')}
             </Text>
           </View>
         ) : null}
 
-        <View style={[styles.mediaCard, { backgroundColor: theme.colorPrimarySoft }]}>
+        <View style={[styles.mediaCard, styles.cardShadow, { backgroundColor: theme.colorPrimarySoft, shadowColor: theme.colorShadow }]}>
           {image ? <Image source={image} style={styles.photo} resizeMode="cover" /> : null}
           <View style={styles.exerciseNav}>
             <Pressable onPress={() => goToExercise(-1)} style={styles.navButton}>
@@ -243,7 +243,7 @@ export function SessionScreen({ navigation, route }: Props) {
           </View>
         </View>
 
-        <View style={[styles.infoPanel, { backgroundColor: theme.colorAccent }]}>
+        <View style={[styles.infoPanel, styles.cardShadow, { backgroundColor: theme.colorAccent, shadowColor: theme.colorShadow }]}>
           <Text style={[styles.infoTitle, { color: theme.colorOnAccent }]}>
             {t('session.target')}: {formatReps(planExercise)}
             {planExercise.targetLoad
@@ -265,7 +265,7 @@ export function SessionScreen({ navigation, route }: Props) {
         </View>
 
         {restRemaining !== null ? (
-          <View style={[styles.restPanel, { backgroundColor: theme.colorPrimary }]}>
+          <View style={[styles.restPanel, styles.cardShadow, { backgroundColor: theme.colorPrimary, shadowColor: theme.colorShadow }]}>
             <Text style={[styles.restLabel, { color: theme.colorOnPrimary }]}>{t('session.rest')}</Text>
             <Text style={[styles.restTime, { color: theme.colorOnPrimary }]}>
               {Math.floor(restRemaining / 60)}:{String(restRemaining % 60).padStart(2, '0')}
@@ -278,7 +278,7 @@ export function SessionScreen({ navigation, route }: Props) {
             </Pressable>
           </View>
         ) : (
-          <View style={[styles.logCard, { backgroundColor: theme.colorSurfaceTint }]}>
+          <View style={[styles.logCard, styles.cardShadow, { backgroundColor: theme.colorSurfaceTint, shadowColor: theme.colorShadow }]}>
             <Text style={[styles.setLabel, { color: theme.colorText }]}>
               {exerciseDone
                 ? `${doneCount}/${planExercise.sets} ✓`
@@ -366,8 +366,9 @@ export function SessionScreen({ navigation, route }: Props) {
 }
 
 const styles = StyleSheet.create({
-  root: { flex: 1, paddingHorizontal: 20 },
-  header: { flexDirection: 'row', alignItems: 'center', marginBottom: 10 },
+  root: { flex: 1 },
+  cardShadow: { shadowOffset: { width: 0, height: 6 }, shadowOpacity: 0.16, shadowRadius: 14, elevation: 3 },
+  header: { flexDirection: 'row', alignItems: 'center', marginBottom: 10, paddingHorizontal: 20 },
   headerButton: { padding: 6 },
   headerCenter: { flex: 1, alignItems: 'center' },
   headerTitle: { fontFamily: fonts.subtitle, fontSize: 18 },

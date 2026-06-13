@@ -7,9 +7,10 @@ import { fonts } from '../theme/tokens';
 interface ScreenProps {
   title?: string;
   children?: ReactNode;
+  padded?: boolean;
 }
 
-export function Screen({ title, children }: ScreenProps) {
+export function Screen({ title, children, padded = true }: ScreenProps) {
   const theme = useTheme();
   const insets = useSafeAreaInsets();
 
@@ -17,11 +18,17 @@ export function Screen({ title, children }: ScreenProps) {
     <View
       style={[
         styles.root,
-        { backgroundColor: theme.colorBg, paddingTop: title ? insets.top + 8 : 8 },
+        {
+          backgroundColor: theme.colorBg,
+          paddingTop: title ? insets.top + 8 : 8,
+          paddingHorizontal: padded ? 20 : 0,
+        },
       ]}
     >
       {title ? (
-        <Text style={[styles.title, { color: theme.colorPrimaryStrong }]}>{title}</Text>
+        <Text style={[styles.title, { color: theme.colorPrimaryStrong }, padded ? null : styles.titleBleed]}>
+          {title}
+        </Text>
       ) : null}
       <View style={styles.body}>{children}</View>
     </View>
@@ -29,7 +36,8 @@ export function Screen({ title, children }: ScreenProps) {
 }
 
 const styles = StyleSheet.create({
-  root: { flex: 1, paddingHorizontal: 20 },
+  root: { flex: 1 },
   title: { fontFamily: fonts.subtitle, fontSize: 22, marginBottom: 12 },
+  titleBleed: { paddingHorizontal: 20 },
   body: { flex: 1 },
 });

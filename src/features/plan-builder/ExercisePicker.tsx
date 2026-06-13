@@ -117,7 +117,7 @@ export function ExercisePicker({ initialSelection, onConfirm }: ExercisePickerPr
 }
 
 const styles = StyleSheet.create({
-  root: { flex: 1 },
+  root: { flex: 1, paddingHorizontal: 20 },
   search: { borderRadius: 999, paddingHorizontal: 16, paddingVertical: 10, fontFamily: fonts.body, fontSize: 14, marginBottom: 10 },
   filters: { marginBottom: 10 },
   columns: { gap: 10 },

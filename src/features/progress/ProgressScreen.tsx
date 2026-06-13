@@ -93,7 +93,7 @@ export function ProgressScreen() {
   }
 
   return (
-    <Screen title={t('progress.title')}>
+    <Screen title={t('progress.title')} padded={false}>
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.scroll}>
         <Text style={[styles.section, { color: theme.colorText }]}>
           {t('progress.loadChart')} ({settings.unit})
@@ -110,7 +110,7 @@ export function ProgressScreen() {
           onSelect={setSelectedExercise}
         />
         {loadPoints.length >= 2 ? (
-          <View style={[styles.chartCard, { backgroundColor: theme.colorSurfaceTint }]}>
+          <View style={[styles.chartCard, { backgroundColor: theme.colorSurfaceTint, shadowColor: theme.colorShadow }]}>
             <LineChart
               data={toChartData(loadPoints, settings.language)}
               width={chartWidth}
@@ -132,7 +132,7 @@ export function ProgressScreen() {
         <Text style={[styles.section, { color: theme.colorText }]}>
           {t('progress.consistencyChart')}
         </Text>
-        <View style={[styles.chartCard, { backgroundColor: theme.colorSurfaceTint }]}>
+        <View style={[styles.chartCard, { backgroundColor: theme.colorSurfaceTint, shadowColor: theme.colorShadow }]}>
           <WeeklyBarChart
             data={consistencyPoints.map((p) => p.value)}
             labels={toChartData(consistencyPoints, settings.language).labels}
@@ -148,8 +148,16 @@ export function ProgressScreen() {
 }
 
 const styles = StyleSheet.create({
-  scroll: { paddingBottom: 32 },
+  scroll: { paddingHorizontal: 20, paddingTop: 4, paddingBottom: 32 },
   empty: { fontFamily: fonts.body, fontSize: 14, marginTop: 8 },
   section: { fontFamily: fonts.subtitle, fontSize: 15, marginTop: 16, marginBottom: 10 },
-  chartCard: { borderRadius: 18, padding: 14, marginTop: 10 },
+  chartCard: {
+    borderRadius: 18,
+    padding: 14,
+    marginTop: 10,
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.16,
+    shadowRadius: 14,
+    elevation: 3,
+  },
 });

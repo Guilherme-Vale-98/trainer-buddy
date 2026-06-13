@@ -24,7 +24,14 @@ export type RootStackParamList = {
   SessionDetail: { sessionId: string };
 };
 
-const Tab = createBottomTabNavigator();
+export type TabParamList = {
+  Dashboard: undefined;
+  Plan: undefined;
+  History: undefined;
+  Progress: undefined;
+};
+
+const Tab = createBottomTabNavigator<TabParamList>();
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const TAB_ICONS: Record<string, keyof typeof Ionicons.glyphMap> = {

@@ -16,6 +16,7 @@ export interface Theme {
   colorTrack: string;
   colorDivider: string;
   colorDanger: string;
+  colorShadow: string;
 }
 
 export const darkTheme: Theme = {
@@ -36,13 +37,14 @@ export const darkTheme: Theme = {
   colorTrack: '#D9D9D9',
   colorDivider: '#3D3C3C',
   colorDanger: '#FF7A7A',
+  colorShadow: '#000000',
 };
 
 export const lightTheme: Theme = {
   name: 'light',
-  colorBg: '#F7F6FB',
+  colorBg: '#F1EDF7',
   colorSurface: '#FFFFFF',
-  colorSurfaceTint: '#EFEBFF',
+  colorSurfaceTint: '#EBE5FB',
   colorPrimary: '#896CFE',
   colorPrimaryStrong: '#6C4DE0',
   colorPrimarySoft: '#B3A0FF',
@@ -54,8 +56,9 @@ export const lightTheme: Theme = {
   colorOnPrimary: '#FFFFFF',
   colorOnAccent: '#232323',
   colorTrack: '#DAD8E4',
-  colorDivider: '#E4E2EC',
+  colorDivider: '#E0DAEE',
   colorDanger: '#C0392B',
+  colorShadow: '#3A2F66',
 };
 
 export const fonts = {

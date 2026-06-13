@@ -201,7 +201,7 @@ export function PlanBuilderScreen({ navigation, route }: Props) {
 
           <Text style={sectionStyle}>{t('planBuilder.workoutSets')}</Text>
           {draft.sets.map((set) => (
-            <View key={set.key} style={[styles.setCard, { backgroundColor: theme.colorSurfaceTint }]}>
+            <View key={set.key} style={[styles.setCard, { backgroundColor: theme.colorSurfaceTint, shadowColor: theme.colorShadow }]}>
               <View style={styles.setHeader}>
                 <TextInput
                   value={set.name}
@@ -298,7 +298,7 @@ export function PlanBuilderScreen({ navigation, route }: Props) {
             {draft.name.trim() || t('planBuilder.planName')}
           </Text>
           {draft.sets.map((set) => (
-            <View key={set.key} style={[styles.setCard, { backgroundColor: theme.colorSurfaceTint }]}>
+            <View key={set.key} style={[styles.setCard, { backgroundColor: theme.colorSurfaceTint, shadowColor: theme.colorShadow }]}>
               <Text style={[styles.setName, { color: theme.colorText }]}>{set.name}</Text>
               <Text style={[styles.setCount, { color: theme.colorTextMuted }]}>
                 {t('planBuilder.exercisesCount', { count: set.exercises.length })}
@@ -319,14 +319,22 @@ export function PlanBuilderScreen({ navigation, route }: Props) {
 }
 
 const styles = StyleSheet.create({
-  root: { flex: 1, paddingHorizontal: 20 },
-  header: { flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 12 },
+  root: { flex: 1 },
+  header: { flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 12, paddingHorizontal: 20 },
   back: { padding: 6, marginLeft: -10 },
   title: { flex: 1, fontFamily: fonts.subtitle, fontSize: 22 },
-  scroll: {},
+  scroll: { paddingHorizontal: 20 },
   section: { fontFamily: fonts.subtitle, fontSize: 15, marginTop: 14, marginBottom: 8 },
   nameInput: { borderRadius: 14, paddingHorizontal: 14, paddingVertical: 12, fontFamily: fonts.body, fontSize: 15, borderWidth: 1 },
-  setCard: { borderRadius: 18, padding: 14, marginBottom: 10 },
+  setCard: {
+    borderRadius: 18,
+    padding: 14,
+    marginBottom: 10,
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.16,
+    shadowRadius: 14,
+    elevation: 3,
+  },
   setHeader: { flexDirection: 'row', alignItems: 'center' },
   setName: { flex: 1, fontFamily: fonts.subtitle, fontSize: 15, padding: 0 },
   iconButton: { padding: 6 },
