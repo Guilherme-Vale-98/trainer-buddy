@@ -77,6 +77,26 @@ export class SessionRepository {
     await db.runAsync('delete from sessions where id = ?', [sessionId]);
   }
 
+  async getAllSessions(): Promise<WorkoutSession[]> {
+    const db = await this.db;
+    const rows = await db.getAllAsync<{ data: string }>(
+      'select data from sessions order by started_at desc',
+      [],
+    );
+    return rows.map((row) => JSON.parse(row.data) as WorkoutSession);
+  }
+
+  async replaceAllSessions(sessions: WorkoutSession[]): Promise<void> {
+    const db = await this.db;
+    await db.runAsync('delete from sessions', []);
+    for (const session of sessions) {
+      await db.runAsync(
+        'insert into sessions (id, status, started_at, finished_at, data) values (?, ?, ?, ?, ?)',
+        [session.id, session.status, session.startedAt, session.finishedAt, JSON.stringify(session)],
+      );
+    }
+  }
+
   private async requireEditableSession(sessionId: string): Promise<WorkoutSession> {
     const session = await this.getSession(sessionId);
     if (!session) throw new Error('session-not-found');

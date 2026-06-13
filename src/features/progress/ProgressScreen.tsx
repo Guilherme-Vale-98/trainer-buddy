@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useState } from 'react';
 import { ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
-import { BarChart, LineChart } from 'react-native-chart-kit';
+import { LineChart } from 'react-native-chart-kit';
 import { useTranslation } from 'react-i18next';
 import { getExercise, getExerciseName } from '../../core/catalog/catalog';
 import { sessionRepository } from '../../core/db/session.repository';
@@ -11,16 +11,18 @@ import { useTheme } from '../../core/theme/ThemeContext';
 import { Screen } from '../../shared/components/Screen';
 import { PillSelector } from '../../shared/components/PillSelector';
 import { fonts } from '../../shared/theme/tokens';
+import { WeeklyBarChart } from './WeeklyBarChart';
 import {
   exercisesWithHistory,
   hexToRgba,
-  maxLoadSeries,
-  volumeSeries,
+  loadProgressionSeries,
+  thinLabels,
   weeklyConsistency,
   type SeriesPoint,
 } from './progress-logic';
 
 const MAX_POINTS = 8;
+const MAX_LABELS = 4;
 
 function shortDate(date: Date, language: 'pt' | 'en'): string {
   return date.toLocaleDateString(language === 'pt' ? 'pt-BR' : 'en-US', {
@@ -32,7 +34,10 @@ function shortDate(date: Date, language: 'pt' | 'en'): string {
 function toChartData(points: SeriesPoint[], language: 'pt' | 'en') {
   const visible = points.slice(-MAX_POINTS);
   return {
-    labels: visible.map((p) => shortDate(p.date, language)),
+    labels: thinLabels(
+      visible.map((p) => shortDate(p.date, language)),
+      MAX_LABELS,
+    ),
     datasets: [{ data: visible.map((p) => Math.round(p.value * 10) / 10) }],
   };
 }
@@ -62,10 +67,9 @@ export function ProgressScreen() {
   const exerciseId = selectedExercise ?? exerciseIds[0] ?? null;
 
   const loadPoints = useMemo(
-    () => (exerciseId ? maxLoadSeries(sessions, exerciseId, settings.unit) : []),
+    () => (exerciseId ? loadProgressionSeries(sessions, exerciseId, settings.unit) : []),
     [sessions, exerciseId, settings.unit],
   );
-  const volumePoints = useMemo(() => volumeSeries(sessions, settings.unit), [sessions, settings.unit]);
   const consistencyPoints = useMemo(() => weeklyConsistency(sessions, 8, new Date()), [sessions]);
 
   const chartWidth = width - 40 - 28;
@@ -74,10 +78,11 @@ export function ProgressScreen() {
     backgroundGradientTo: theme.colorSurfaceTint,
     decimalPlaces: 0,
     color: (opacity = 1) => hexToRgba(theme.colorPrimary, opacity),
-    labelColor: (opacity = 1) => hexToRgba(theme.colorText, Math.min(opacity, 0.8)),
-    propsForBackgroundLines: { stroke: hexToRgba(theme.colorText, 0.1) },
+    labelColor: (opacity = 1) => hexToRgba(theme.colorText, Math.min(opacity, 0.7)),
+    propsForBackgroundLines: { strokeDasharray: '', stroke: hexToRgba(theme.colorText, 0.08) },
     barPercentage: 0.6,
   };
+  const chartStyle = { borderRadius: 12, paddingRight: 38 };
 
   if (sessions.length === 0) {
     return (
@@ -104,54 +109,37 @@ export function ProgressScreen() {
           selected={exerciseId ?? ''}
           onSelect={setSelectedExercise}
         />
-        {loadPoints.length > 0 ? (
+        {loadPoints.length >= 2 ? (
           <View style={[styles.chartCard, { backgroundColor: theme.colorSurfaceTint }]}>
             <LineChart
               data={toChartData(loadPoints, settings.language)}
               width={chartWidth}
               height={200}
               chartConfig={chartConfig}
+              segments={4}
+              withVerticalLines={false}
               bezier
               fromZero
-              style={styles.chart}
+              style={chartStyle}
             />
           </View>
         ) : (
-          <Text style={[styles.empty, { color: theme.colorTextMuted }]}>{t('progress.empty')}</Text>
+          <Text style={[styles.empty, { color: theme.colorTextMuted }]}>
+            {t('progress.needMore')}
+          </Text>
         )}
-
-        <Text style={[styles.section, { color: theme.colorText }]}>
-          {t('progress.volumeChart')} ({settings.unit})
-        </Text>
-        <View style={[styles.chartCard, { backgroundColor: theme.colorSurfaceTint }]}>
-          <BarChart
-            data={toChartData(volumePoints, settings.language)}
-            width={chartWidth}
-            height={200}
-            chartConfig={chartConfig}
-            fromZero
-            yAxisLabel=""
-            yAxisSuffix=""
-            style={styles.chart}
-          />
-        </View>
 
         <Text style={[styles.section, { color: theme.colorText }]}>
           {t('progress.consistencyChart')}
         </Text>
         <View style={[styles.chartCard, { backgroundColor: theme.colorSurfaceTint }]}>
-          <BarChart
-            data={toChartData(consistencyPoints, settings.language)}
+          <WeeklyBarChart
+            data={consistencyPoints.map((p) => p.value)}
+            labels={toChartData(consistencyPoints, settings.language).labels}
             width={chartWidth}
-            height={200}
-            chartConfig={{
-              ...chartConfig,
-              color: (opacity = 1) => hexToRgba(theme.colorAccentStrong, opacity),
-            }}
-            fromZero
-            yAxisLabel=""
-            yAxisSuffix=""
-            style={styles.chart}
+            barColor={theme.colorAccentStrong}
+            gridColor={hexToRgba(theme.colorText, 0.12)}
+            labelColor={hexToRgba(theme.colorText, 0.7)}
           />
         </View>
       </ScrollView>
@@ -164,5 +152,4 @@ const styles = StyleSheet.create({
   empty: { fontFamily: fonts.body, fontSize: 14, marginTop: 8 },
   section: { fontFamily: fonts.subtitle, fontSize: 15, marginTop: 16, marginBottom: 10 },
   chartCard: { borderRadius: 18, padding: 14, marginTop: 10 },
-  chart: { borderRadius: 12 },
 });

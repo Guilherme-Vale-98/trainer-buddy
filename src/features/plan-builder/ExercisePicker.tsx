@@ -102,6 +102,7 @@ export function ExercisePicker({ initialSelection, onConfirm }: ExercisePickerPr
         columnWrapperStyle={styles.columns}
         contentContainerStyle={[styles.listContent, { paddingBottom: insets.bottom + 90 }]}
         showsVerticalScrollIndicator={false}
+        keyboardShouldPersistTaps="handled"
       />
       <Pressable
         onPress={() => onConfirm(selection)}

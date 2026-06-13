@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   Alert,
   Image,
+  KeyboardAvoidingView,
   Linking,
   Pressable,
   ScrollView,
@@ -10,6 +11,7 @@ import {
   TextInput,
   View,
 } from 'react-native';
+import { useKeepAwake } from 'expo-keep-awake';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { useTranslation } from 'react-i18next';
@@ -33,13 +35,13 @@ import {
   parseLoadInput,
   parseRepsInput,
   previousPerformance,
-  suggestedLoad,
-  suggestedReps,
+  suggestedEntryForSet,
 } from './session-logic';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Session'>;
 
 export function SessionScreen({ navigation, route }: Props) {
+  useKeepAwake();
   const { t } = useTranslation();
   const { settings } = useSettings();
   const theme = useTheme();
@@ -96,13 +98,15 @@ export function SessionScreen({ navigation, route }: Props) {
   const exerciseDone = session && planExercise ? isExerciseComplete(session, planExercise) : false;
 
   const prefill = useCallback(() => {
-    if (!planExercise) return;
-    const reps = suggestedReps(planExercise, previous, doneCount + 1);
-    const load = suggestedLoad(planExercise, previous);
-    setRepsInput(String(reps));
-    setLoadInput(load ? String(load.value) : '');
+    if (!session || !planExercise) return;
+    const currentSets = session.completedSets.filter(
+      (s) => s.catalogExerciseId === planExercise.catalogExerciseId,
+    );
+    const entry = suggestedEntryForSet(planExercise, currentSets, previous, doneCount + 1);
+    setRepsInput(String(entry.reps));
+    setLoadInput(entry.load ? String(entry.load.value) : '');
     setInputError(false);
-  }, [planExercise, previous, doneCount]);
+  }, [session, planExercise, previous, doneCount]);
 
   useEffect(() => {
     prefill();
@@ -113,11 +117,20 @@ export function SessionScreen({ navigation, route }: Props) {
   const image = getExerciseImages(catalogExercise.id)[0];
   const progress = exerciseProgress(session);
   const complete = isSessionComplete(session);
+  const showNextExercise = exerciseDone && !complete;
 
   const goToExercise = (direction: -1 | 1) => {
     const total = session.planSnapshot.exercises.length;
     setExerciseIndex((exerciseIndex + direction + total) % total);
     setRestRemaining(null);
+  };
+
+  const goToNextIncomplete = () => {
+    const next = nextIncompleteIndex(session, exerciseIndex);
+    if (next !== -1) {
+      setExerciseIndex(next);
+      setRestRemaining(null);
+    }
   };
 
   const completeSet = async () => {
@@ -134,11 +147,8 @@ export function SessionScreen({ navigation, route }: Props) {
       actualLoad: load.load === null ? null : { value: load.load, unit: planExercise.targetLoad?.unit ?? settings.unit },
     });
     setSession(updated);
-    if (completedCount(updated, planExercise.catalogExerciseId) >= planExercise.sets) {
-      const next = nextIncompleteIndex(updated, exerciseIndex);
-      if (next !== -1) setExerciseIndex(next);
-    }
-    if (!isSessionComplete(updated)) {
+    const exerciseNowDone = completedCount(updated, planExercise.catalogExerciseId) >= planExercise.sets;
+    if (!exerciseNowDone) {
       setRestRemaining(planExercise.restSeconds);
     }
   };
@@ -178,7 +188,10 @@ export function SessionScreen({ navigation, route }: Props) {
   ];
 
   return (
-    <View style={[styles.root, { backgroundColor: theme.colorBg, paddingTop: insets.top + 8 }]}>
+    <KeyboardAvoidingView
+      behavior="padding"
+      style={[styles.root, { backgroundColor: theme.colorBg, paddingTop: insets.top + 8 }]}
+    >
       <View style={styles.header}>
         <Pressable onPress={() => navigation.goBack()} style={styles.headerButton}>
           <Ionicons name="chevron-back" size={24} color={theme.colorPrimaryStrong} />
@@ -198,6 +211,7 @@ export function SessionScreen({ navigation, route }: Props) {
 
       <ScrollView
         showsVerticalScrollIndicator={false}
+        keyboardShouldPersistTaps="handled"
         contentContainerStyle={{ paddingBottom: insets.bottom + 24 }}
       >
         {complete ? (
@@ -270,6 +284,11 @@ export function SessionScreen({ navigation, route }: Props) {
                 ? `${doneCount}/${planExercise.sets} ✓`
                 : t('session.setOf', { current: currentSetNumber, total: planExercise.sets })}
             </Text>
+            {exerciseDone ? (
+              <Text style={[styles.goalHint, { color: theme.colorTextMuted }]}>
+                {t('session.goalReached')}
+              </Text>
+            ) : null}
             <View style={styles.inputsRow}>
               <View style={styles.field}>
                 <Text style={[styles.fieldLabel, { color: theme.colorTextMuted }]}>
@@ -305,11 +324,23 @@ export function SessionScreen({ navigation, route }: Props) {
               style={[styles.doneButton, { backgroundColor: theme.colorPrimary }]}
             >
               <Text style={[styles.doneLabel, { color: theme.colorOnPrimary }]}>
-                {t('session.done')}
+                {exerciseDone ? t('session.logExtra') : t('session.done')}
               </Text>
             </Pressable>
           </View>
         )}
+
+        {showNextExercise ? (
+          <Pressable
+            onPress={goToNextIncomplete}
+            style={[styles.nextButton, { backgroundColor: theme.colorAccent }]}
+          >
+            <Text style={[styles.nextLabel, { color: theme.colorOnAccent }]}>
+              {t('session.nextExercise')}
+            </Text>
+            <Ionicons name="arrow-forward" size={18} color={theme.colorOnAccent} />
+          </Pressable>
+        ) : null}
 
         <Pressable
           onPress={finishWorkout}
@@ -330,7 +361,7 @@ export function SessionScreen({ navigation, route }: Props) {
           </Text>
         </Pressable>
       </ScrollView>
-    </View>
+    </KeyboardAvoidingView>
   );
 }
 
@@ -360,13 +391,16 @@ const styles = StyleSheet.create({
   skip: { borderRadius: 999, paddingHorizontal: 22, paddingVertical: 8 },
   skipLabel: { fontFamily: fonts.label, fontSize: 13 },
   logCard: { borderRadius: 18, padding: 14, marginBottom: 12 },
-  setLabel: { fontFamily: fonts.subtitle, fontSize: 15, marginBottom: 10 },
+  setLabel: { fontFamily: fonts.subtitle, fontSize: 15, marginBottom: 6 },
+  goalHint: { fontFamily: fonts.body, fontSize: 12, marginBottom: 10 },
   inputsRow: { flexDirection: 'row', gap: 12, marginBottom: 12 },
   field: { flex: 1 },
   fieldLabel: { fontFamily: fonts.label, fontSize: 12, marginBottom: 6 },
   input: { borderRadius: 12, paddingHorizontal: 12, paddingVertical: 10, fontFamily: fonts.body, fontSize: 16, borderWidth: 1, textAlign: 'center' },
   doneButton: { borderRadius: 999, paddingVertical: 13, alignItems: 'center' },
   doneLabel: { fontFamily: fonts.label, fontSize: 15 },
+  nextButton: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, borderRadius: 999, paddingVertical: 14, marginBottom: 12 },
+  nextLabel: { fontFamily: fonts.label, fontSize: 15 },
   finishButton: { borderRadius: 999, paddingVertical: 13, alignItems: 'center', marginBottom: 12 },
   finishLabel: { fontFamily: fonts.label, fontSize: 15 },
 });

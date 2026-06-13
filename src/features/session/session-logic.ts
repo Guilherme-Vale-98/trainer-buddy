@@ -69,6 +69,24 @@ export function suggestedLoad(
   return exercise.targetLoad;
 }
 
+export function suggestedEntryForSet(
+  exercise: PlanExercise,
+  currentExerciseSets: CompletedSet[],
+  previousHistory: CompletedSet[] | null,
+  nextSetNumber: number,
+): { reps: number; load: { value: number; unit: LoadUnit } | null } {
+  if (currentExerciseSets.length > 0) {
+    const last = currentExerciseSets.reduce((latest, set) =>
+      set.setNumber > latest.setNumber ? set : latest,
+    );
+    return { reps: last.actualReps, load: last.actualLoad };
+  }
+  return {
+    reps: suggestedReps(exercise, previousHistory, nextSetNumber),
+    load: suggestedLoad(exercise, previousHistory),
+  };
+}
+
 export function parseRepsInput(value: string): number | null {
   const trimmed = value.trim();
   if (!/^\d+$/.test(trimmed)) return null;

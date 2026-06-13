@@ -9,6 +9,7 @@ import {
   parseLoadInput,
   parseRepsInput,
   previousPerformance,
+  suggestedEntryForSet,
   suggestedLoad,
   suggestedReps,
 } from '../session-logic';
@@ -126,6 +127,36 @@ describe('suggestions', () => {
     expect(suggestedLoad(ex, null)).toEqual({ value: 40, unit: 'kg' });
     const noTarget: PlanExercise = { ...ex, targetLoad: null };
     expect(suggestedLoad(noTarget, null)).toBeNull();
+  });
+});
+
+describe('carry-forward entry for next set', () => {
+  const ex = exercise('bench');
+
+  test('first set falls back to previous-session suggestion or plan target', () => {
+    const entry = suggestedEntryForSet(ex, [], null, 1);
+    expect(entry.reps).toBe(8);
+    expect(entry.load).toEqual({ value: 40, unit: 'kg' });
+  });
+
+  test('carries the most recent set entered in the current session', () => {
+    const sets = [completedSet('bench', 1, 10, 40)];
+    const entry = suggestedEntryForSet(ex, sets, null, 2);
+    expect(entry.reps).toBe(10);
+    expect(entry.load).toEqual({ value: 40, unit: 'kg' });
+  });
+
+  test('an edit to a later set carries forward, not the first set', () => {
+    const sets = [completedSet('bench', 1, 10, 40), completedSet('bench', 2, 8, 50)];
+    const entry = suggestedEntryForSet(ex, sets, null, 3);
+    expect(entry.reps).toBe(8);
+    expect(entry.load).toEqual({ value: 50, unit: 'kg' });
+  });
+
+  test('carries a null load forward when the last set had none', () => {
+    const sets = [completedSet('bench', 1, 12, null)];
+    const entry = suggestedEntryForSet(ex, sets, null, 2);
+    expect(entry.load).toBeNull();
   });
 });
 

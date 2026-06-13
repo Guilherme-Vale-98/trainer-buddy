@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { Alert, BackHandler, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, BackHandler, KeyboardAvoidingView, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { useTranslation } from 'react-i18next';
@@ -161,7 +161,10 @@ export function PlanBuilderScreen({ navigation, route }: Props) {
   );
 
   return (
-    <View style={[styles.root, { backgroundColor: theme.colorBg, paddingTop: insets.top + 8 }]}>
+    <KeyboardAvoidingView
+      behavior="padding"
+      style={[styles.root, { backgroundColor: theme.colorBg, paddingTop: insets.top + 8 }]}
+    >
       <View style={styles.header}>
         <Pressable onPress={internalBack} style={styles.back}>
           <Ionicons name="chevron-back" size={24} color={theme.colorPrimaryStrong} />
@@ -172,7 +175,11 @@ export function PlanBuilderScreen({ navigation, route }: Props) {
       </View>
 
       {view.kind === 'basics' ? (
-        <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={[styles.scroll, { paddingBottom: insets.bottom + 32 }]}>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          keyboardShouldPersistTaps="handled"
+          contentContainerStyle={[styles.scroll, { paddingBottom: insets.bottom + 32 }]}
+        >
           <Text style={sectionStyle}>{t('planBuilder.planName')}</Text>
           <TextInput
             value={draft.name}
@@ -231,7 +238,11 @@ export function PlanBuilderScreen({ navigation, route }: Props) {
       ) : null}
 
       {view.kind === 'set' && currentSet ? (
-        <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={[styles.scroll, { paddingBottom: insets.bottom + 32 }]}>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          keyboardShouldPersistTaps="handled"
+          contentContainerStyle={[styles.scroll, { paddingBottom: insets.bottom + 32 }]}
+        >
           {currentSet.exercises.map((exercise) => (
             <ExerciseConfigCard
               key={exercise.catalogExerciseId}
@@ -278,7 +289,11 @@ export function PlanBuilderScreen({ navigation, route }: Props) {
       ) : null}
 
       {view.kind === 'review' ? (
-        <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={[styles.scroll, { paddingBottom: insets.bottom + 32 }]}>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          keyboardShouldPersistTaps="handled"
+          contentContainerStyle={[styles.scroll, { paddingBottom: insets.bottom + 32 }]}
+        >
           <Text style={[styles.reviewName, { color: theme.colorText }]}>
             {draft.name.trim() || t('planBuilder.planName')}
           </Text>
@@ -299,7 +314,7 @@ export function PlanBuilderScreen({ navigation, route }: Props) {
           {primaryButton(t('planBuilder.save'), () => void save())}
         </ScrollView>
       ) : null}
-    </View>
+    </KeyboardAvoidingView>
   );
 }
 

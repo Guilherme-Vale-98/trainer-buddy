@@ -3,9 +3,10 @@ import {
   convertLoad,
   exercisesWithHistory,
   hexToRgba,
-  maxLoadSeries,
+  loadProgressionSeries,
+  mean,
   startOfWeek,
-  volumeSeries,
+  thinLabels,
   weeklyConsistency,
 } from '../progress-logic';
 
@@ -45,41 +46,51 @@ describe('unit conversion', () => {
   });
 });
 
-describe('max load series', () => {
+describe('mean', () => {
+  test('averages the values', () => {
+    expect(mean([40, 45, 50])).toBe(45);
+    expect(mean([40, 50])).toBe(45);
+  });
+
+  test('single value is its own mean', () => {
+    expect(mean([40])).toBe(40);
+  });
+});
+
+describe('load progression series (mean per session)', () => {
   const newer = session('s2', '2026-06-10T10:00:00.000Z', [
-    completedSet('bench', 10, 45),
-    completedSet('bench', 8, 50),
+    completedSet('bench', 10, 40),
+    completedSet('bench', 8, 45),
+    completedSet('bench', 6, 50),
   ]);
   const older = session('s1', '2026-06-01T10:00:00.000Z', [completedSet('bench', 10, 40)]);
   const noLoad = session('s3', '2026-06-11T10:00:00.000Z', [completedSet('bench', 12, null)]);
 
-  test('takes the max load per session in chronological order', () => {
-    const series = maxLoadSeries([newer, older], 'bench', 'kg');
-    expect(series.map((p) => p.value)).toEqual([40, 50]);
+  test('takes the mean load per session in chronological order', () => {
+    const series = loadProgressionSeries([newer, older], 'bench', 'kg');
+    expect(series.map((p) => p.value)).toEqual([40, 45]);
     expect(series[0].date.toISOString()).toBe('2026-06-01T10:00:00.000Z');
   });
 
+  test('averages across the session sets', () => {
+    const mixed = session('s5', '2026-06-13T10:00:00.000Z', [
+      completedSet('bench', 10, 40),
+      completedSet('bench', 10, 40),
+      completedSet('bench', 1, 100),
+    ]);
+    const series = loadProgressionSeries([mixed], 'bench', 'kg');
+    expect(series[0].value).toBe(60);
+  });
+
   test('skips sessions without a logged load for the exercise', () => {
-    const series = maxLoadSeries([noLoad, newer, older], 'bench', 'kg');
-    expect(series.map((p) => p.value)).toEqual([40, 50]);
+    const series = loadProgressionSeries([noLoad, newer, older], 'bench', 'kg');
+    expect(series.map((p) => p.value)).toEqual([40, 45]);
   });
 
   test('converts to the requested unit', () => {
     const lbSession = session('s4', '2026-06-12T10:00:00.000Z', [completedSet('bench', 10, 100, 'lb')]);
-    const series = maxLoadSeries([lbSession], 'bench', 'kg');
+    const series = loadProgressionSeries([lbSession], 'bench', 'kg');
     expect(series[0].value).toBeCloseTo(45.36, 2);
-  });
-});
-
-describe('volume series', () => {
-  test('sums reps x load per session, ignoring loadless sets', () => {
-    const s = session('s1', '2026-06-10T10:00:00.000Z', [
-      completedSet('bench', 10, 40),
-      completedSet('bench', 8, 40),
-      completedSet('plank', 1, null),
-    ]);
-    const series = volumeSeries([s], 'kg');
-    expect(series[0].value).toBe(10 * 40 + 8 * 40);
   });
 });
 
@@ -112,6 +123,23 @@ describe('history helpers', () => {
       session('s1', '2026-06-01T10:00:00.000Z', [completedSet('bench', 10, 40)]),
     ];
     expect(exercisesWithHistory(sessions)).toEqual(['bench', 'row']);
+  });
+});
+
+describe('thinLabels', () => {
+  test('keeps all labels when within the limit', () => {
+    expect(thinLabels(['a', 'b', 'c'], 4)).toEqual(['a', 'b', 'c']);
+  });
+
+  test('thins evenly and always keeps the most recent (last) label', () => {
+    const result = thinLabels(['1', '2', '3', '4', '5', '6', '7', '8'], 4);
+    expect(result).toEqual(['', '2', '', '4', '', '6', '', '8']);
+    expect(result[result.length - 1]).toBe('8');
+  });
+
+  test('non-empty count does not exceed the limit', () => {
+    const result = thinLabels(Array.from({ length: 8 }, (_, i) => String(i)), 4);
+    expect(result.filter((l) => l !== '')).toHaveLength(4);
   });
 });
 

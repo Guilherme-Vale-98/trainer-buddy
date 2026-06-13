@@ -31,7 +31,11 @@ export function exercisesWithHistory(sessions: WorkoutSession[]): string[] {
   return result;
 }
 
-export function maxLoadSeries(
+export function mean(values: number[]): number {
+  return values.reduce((sum, value) => sum + value, 0) / values.length;
+}
+
+export function loadProgressionSeries(
   sessions: WorkoutSession[],
   catalogExerciseId: string,
   unit: LoadUnit,
@@ -42,20 +46,10 @@ export function maxLoadSeries(
       .filter((set) => set.catalogExerciseId === catalogExerciseId && set.actualLoad)
       .map((set) => convertLoad(set.actualLoad!.value, set.actualLoad!.unit, unit));
     if (loads.length > 0) {
-      points.push({ date: new Date(session.startedAt), value: Math.max(...loads) });
+      points.push({ date: new Date(session.startedAt), value: mean(loads) });
     }
   }
   return points;
-}
-
-export function volumeSeries(sessions: WorkoutSession[], unit: LoadUnit): SeriesPoint[] {
-  return chronological(sessions).map((session) => ({
-    date: new Date(session.startedAt),
-    value: session.completedSets.reduce((total, set) => {
-      if (!set.actualLoad) return total;
-      return total + set.actualReps * convertLoad(set.actualLoad.value, set.actualLoad.unit, unit);
-    }, 0),
-  }));
 }
 
 export function startOfWeek(date: Date): Date {
@@ -85,6 +79,13 @@ export function weeklyConsistency(
     points.push({ date: weekStart, value: count });
   }
   return points;
+}
+
+export function thinLabels(labels: string[], maxLabels: number): string[] {
+  if (labels.length <= maxLabels) return labels;
+  const step = Math.ceil(labels.length / maxLabels);
+  const lastIndex = labels.length - 1;
+  return labels.map((label, index) => ((lastIndex - index) % step === 0 ? label : ''));
 }
 
 export function hexToRgba(hex: string, opacity: number): string {

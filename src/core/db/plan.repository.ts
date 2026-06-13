@@ -37,6 +37,18 @@ export class PlanRepository {
     const row = await db.getFirstAsync<{ data: string }>('select data from plans limit 1', []);
     return row ? (JSON.parse(row.data) as WorkoutPlan) : null;
   }
+
+  async replaceActivePlan(plan: WorkoutPlan | null): Promise<void> {
+    const db = await this.db;
+    await db.runAsync('delete from plans', []);
+    if (plan) {
+      await db.runAsync('insert into plans (id, created_at, data) values (?, ?, ?)', [
+        plan.id,
+        plan.createdAt,
+        JSON.stringify(plan),
+      ]);
+    }
+  }
 }
 
 export const planRepository = new PlanRepository(getDatabase());
